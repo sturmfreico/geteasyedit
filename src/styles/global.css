@@ -136,7 +136,7 @@
 }
 
 /* custom scrollbar */
-::-webkit-scrollbar {
+/* ::-webkit-scrollbar {
   width: 10px;
 }
 
@@ -150,7 +150,7 @@
 
 ::-webkit-scrollbar-thumb:hover {
   background: #555;
-}
+} */
 
 /* markdown style */
 .content p {
