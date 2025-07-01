@@ -19,6 +19,8 @@ export default {
       },
       colors: {
         green: "var(--green)",
+        greenHover: "#7fe141",
+        darkGreen: "#173402",
         black: "var(--black)",
         dark: "var(--dark)",
         gray: "var(--gray)",

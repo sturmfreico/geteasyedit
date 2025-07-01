@@ -4,10 +4,10 @@ import decorForm from "../../assets/pics/contact-pic.png";
 ---
 
 <div
-  class="flex relative justify-start items-center p-[60px] bg-[#F3F3F3] rounded-[45px] overflow-hidden"
+  class="relative flex items-center justify-start overflow-hidden rounded-[45px] bg-[#F3F3F3] p-[60px]"
 >
-  <form class="bg-gray sm:p-6 h-full w-full lg:max-w-lg">
-    <div class="flex flex-col sm:flex-row gap-[35px] sm:items-center mb-10">
+  <form class="h-full w-full bg-gray sm:p-6 lg:max-w-lg">
+    <div class="mb-10 flex flex-col gap-[35px] sm:flex-row sm:items-center">
       <div class="flex items-center gap-[14px]">
         <input
           type="checkbox"
@@ -31,40 +31,40 @@ import decorForm from "../../assets/pics/contact-pic.png";
     </div>
 
     <div class="mb-4">
-      <label for="name" class="block text-black mb-2">Name*</label>
+      <label for="name" class="mb-2 block text-black">Name*</label>
       <input
         type="text"
         id="name"
         name="name"
         placeholder="Name"
-        class="w-full px-[30px] py-[18px] border border-black rounded-[14px] text-black outline-none"
+        class="w-full rounded-xl border border-black px-[30px] py-[18px] text-black outline-none"
       />
     </div>
 
     <div class="mb-4">
-      <label for="email" class="block text-black mb-2">Email*</label>
+      <label for="email" class="mb-2 block text-black">Email*</label>
       <input
         type="email"
         id="email"
         name="email"
         placeholder="Email"
-        class="w-full px-[30px] py-[18px] border border-black rounded-[14px] text-black outline-none"
+        class="w-full rounded-xl border border-black px-[30px] py-[18px] text-black outline-none"
       />
     </div>
 
     <div class="mb-4">
-      <label for="message" class="block text-black mb-2">Message*</label>
+      <label for="message" class="mb-2 block text-black">Message*</label>
       <textarea
         id="message"
         name="message"
         placeholder="Message"
-        class="w-full px-[30px] py-[18px] border border-black rounded-[14px] text-black outline-none"
+        class="w-full rounded-xl border border-black px-[30px] py-[18px] text-black outline-none"
       ></textarea>
     </div>
 
     <button type="submit" name="submit" class="btn-primary w-full">Send</button>
   </form>
-  <picture class="absolute right-[-25%] top-[2%] bottom-[2%] hidden lg:block">
+  <picture class="absolute bottom-[2%] right-[-25%] top-[2%] hidden lg:block">
     <Image src={decorForm} alt="decor" />
   </picture>
 </div>

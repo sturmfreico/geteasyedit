@@ -22,20 +22,20 @@ const links = [
 ---
 
 <section class="sm:px-5">
-  <div class="w-full max-w-[1240px] mx-auto">
+  <div class="mx-auto w-full max-w-[1280px]">
     <div
-      class="px-[15px] bg-dark text-gray py-[55px] lg:px-[60px] sm:rounded-t-[45px]"
+      class="bg-dark px-[15px] py-[55px] text-gray sm:rounded-t-[45px] lg:px-[60px]"
     >
       <div>
         <div
-          class="flex flex-col lg:flex-row gap-7 items-center justify-between"
+          class="flex flex-col items-center justify-between gap-7 lg:flex-row"
         >
           <picture>
             <a href="#home">
               <Image src={Logo} alt="Logo for Kreatif Brand" />
             </a>
           </picture>
-          <ul class="flex flex-col sm:flex-row gap-5">
+          <ul class="flex flex-col gap-5 sm:flex-row">
             {
               links.map((link) => {
                 return (
@@ -65,11 +65,13 @@ const links = [
           </ul>
         </div>
 
-        <div class="flex flex-col lg:flex-row mt-[66px] mb-[51px]">
+        <div class="mb-[51px] mt-[66px] flex flex-col lg:flex-row">
           <div
-            class="flex text-center lg:text-start flex-col w-full lg:w-[30%]"
+            class="flex w-full flex-col text-center lg:w-[30%] lg:text-start"
           >
-            <h3 class="mb-5 text-center md:text-left text-2xl text-green">Contact us</h3>
+            <h3 class="mb-5 text-center text-2xl text-green md:text-left">
+              Contact us
+            </h3>
             <div class="flex flex-col justify-between gap-4">
               <span> Email: examplemail.com </span>
               <span> Phone: +123 456 789 </span>
@@ -78,26 +80,24 @@ const links = [
               </span>
             </div>
           </div>
-          <div class="flex-grow my-10 lg:my-0 lg:ml-12">
+          <div class="my-10 flex-grow lg:my-0 lg:ml-12">
             <ShortForm />
           </div>
         </div>
       </div>
 
-      <div class="h-[1px] bg-gray mb-5"></div>
+      <div class="mb-5 h-[1px] bg-gray"></div>
       <div
-        class="flex flex-col lg:flex-row h-20 justify-center mt-4 text-center md:justify-between md:mt-0"
+        class="mt-4 flex h-20 flex-col justify-center text-center md:mt-0 md:justify-between lg:flex-row"
       >
         <span
           >2024 Positivus - Made With <a
             class="underline"
             target="_blank"
             href="https://astro.build">Astro</a
-          > by 
-          <a 
-          class="underline"
-          target="_blank"
-          href="https://manulthanura.com">Manul</a
+          > by
+          <a class="underline" target="_blank" href="https://manulthanura.com"
+            >Manul</a
           ></span
         >&nbsp
         <span>

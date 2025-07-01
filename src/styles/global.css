@@ -29,11 +29,16 @@
   }
 
   :root {
-    --green: #b9ff66;
+    /* --green: #b9ff66; */
+    --green: #9ee772;
+    --green-hover: #7fe141;
     --black: rgb(0, 0, 0);
     --dark: #191a23;
+    --dark-green: #173402;
     --gray: #f3f3f3;
     --white: #ffffff;
+    --color-green-hover: #7fe141;
+    --color-dark-green: #173402;
   }
 
   /* @layer base {
@@ -101,36 +106,36 @@
 
   @layer components {
     .btn-primary {
-      @apply bg-dark text-white rounded-lg px-[35px] py-5 transition-all duration-200;
+      @apply rounded-xl bg-dark px-[35px] py-5 text-white transition-all duration-200;
     }
     .btn-primary:hover {
-      @apply bg-green text-black transform scale-105;
+      @apply scale-105 transform bg-green text-black;
     }
 
     .btn-secondary {
-      @apply bg-transparent text-black px-[35px] py-5 rounded-lg border border-solid border-black transition-all duration-200;
+      @apply rounded-xl border border-solid border-black bg-transparent px-[35px] py-5 text-black transition-all duration-200;
     }
     .btn-secondary:hover {
-      @apply bg-black text-white border-green transform scale-105;
+      @apply scale-105 transform border-green bg-black text-white;
     }
 
     .btn-tertiary {
-      @apply bg-green text-black rounded-lg px-[35px] py-5 transition-all duration-200;
+      @apply rounded-xl bg-green px-[35px] py-5 text-black transition-all duration-200;
     }
     .btn-tertiary:hover {
-      @apply bg-white text-black transform scale-105;
+      @apply scale-105 transform bg-white text-black;
     }
 
     .greenhead {
-      @apply bg-green text-black rounded-[7px] px-[7px];
+      @apply rounded-xl bg-green px-2 py-1 text-black;
     }
 
     .whitehead {
-      @apply bg-white text-black rounded-[7px] px-[7px];
+      @apply rounded-xl bg-white px-2 py-1 text-black;
     }
 
     .blackhead {
-      @apply bg-black text-white rounded-[7px] px-[7px];
+      @apply rounded-xl bg-black px-2 py-1 text-white;
     }
   }
 }
