@@ -12,33 +12,100 @@ import HeroIlust from "../../assets/pics/hero.svg";
   >
     <div class="row items-center md:w-6/12">
       <div class="space-y-8 text-left">
+        <div class="mb-4 flex justify-center md:justify-start">
+          <span
+            class="inline-flex items-center rounded-full bg-blue-100 px-3 py-1 text-sm font-medium text-blue-800"
+          >
+            ⚡ Save 80% on support tickets
+          </span>
+        </div>
         <h1
-          class="text-center text-4xl font-medium leading-none md:text-left md:text-6xl"
+          class="text-gray-900 text-center text-4xl font-bold leading-none md:text-left md:text-6xl"
         >
-          Navigating the <br /> digital landscape <br /> for success
+          Let customers <br />
+          <span class="text-[#7fe141]">edit their own</span>
+          <br />
+          Shopify orders
         </h1>
         <p
-          class="mb-8 mt-6 text-center text-lg font-normal leading-7 sm:mb-12 md:pr-12 md:text-left"
+          class="text-gray-600 mb-8 mt-6 text-center text-lg font-normal leading-relaxed sm:mb-12 md:pr-12 md:text-left"
         >
-          Our digital marketing agency helps businesses grow and succeed online
-          through a range of services including SEO, PPC, social media
-          marketing, and content creation.
+          Stop drowning in "can you change my order" tickets. Our app empowers
+          customers to modify their orders themselves, saving your team hours
+          daily while boosting customer satisfaction.
         </p>
         <div
-          class="inline-flex w-full items-center justify-center md:justify-start"
+          class="space-y-4 md:flex md:items-center md:space-x-4 md:space-y-0"
         >
-          <a
-            href="https://github.com/manulthanura/Positivus"
-            target="_blank"
-            class="text-dark-green rounded-xl bg-green px-8 py-5 text-center text-xl font-normal leading-7 hover:bg-[#7fe141]"
+          <div
+            class="inline-flex w-full items-center justify-center md:w-auto md:justify-start"
           >
-            Get the app
-          </a>
+            <a
+              href="https://github.com/manulthanura/Positivus"
+              target="_blank"
+              class="text-dark-green rounded-xl bg-green px-8 py-5 text-center text-xl font-normal leading-7 shadow-lg duration-200 hover:scale-105 hover:bg-[#7fe141] hover:shadow-xl"
+            >
+              Start Free Trial
+            </a>
+          </div>
+          <div class="text-center md:text-left">
+            <p class="text-gray-500 text-sm">
+              <span class="text-green-600 font-semibold">Free 14-day trial</span
+              > • No credit card required
+            </p>
+          </div>
+        </div>
+        <div
+          class="text-gray-500 flex items-center justify-center space-x-6 pt-4 text-sm md:justify-start"
+        >
+          <div class="flex items-center space-x-2">
+            <svg
+              class="text-green-500 h-5 w-5"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                clip-rule="evenodd"></path>
+            </svg>
+            <span>2-minute setup</span>
+          </div>
+          <div class="flex items-center space-x-2">
+            <svg
+              class="text-green-500 h-5 w-5"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                clip-rule="evenodd"></path>
+            </svg>
+            <span>Works with any theme</span>
+          </div>
+          <div class="flex items-center space-x-2">
+            <svg
+              class="text-green-500 h-5 w-5"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                clip-rule="evenodd"></path>
+            </svg>
+            <span>No revenue share</span>
+          </div>
         </div>
       </div>
     </div>
-    <div class="flex items-center md:w-6/12 md:justify-end">
-      <Image src={HeroIlust} alt="Hero Ilustration" loading="eager" />
+    <div class="mb-8 flex items-center md:mb-0 md:w-6/12 md:justify-end">
+      <Image
+        src={HeroIlust}
+        alt="Shopify Order Editing App Dashboard"
+        loading="eager"
+      />
     </div>
   </div>
 </Section>

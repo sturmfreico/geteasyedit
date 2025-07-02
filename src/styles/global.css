@@ -32,77 +32,12 @@
     /* --green: #b9ff66; */
     --green: #9ee772;
     --green-hover: #7fe141;
-    --black: rgb(0, 0, 0);
     --dark: #191a23;
     --dark-green: #173402;
     --gray: #f3f3f3;
-    --white: #ffffff;
     --color-green-hover: #7fe141;
     --color-dark-green: #173402;
   }
-
-  /* @layer base {
-    * {
-      box-sizing: border-box;
-      font-family: "Grotesk", sans-serif;
-      scroll-behavior: smooth;
-    }
-
-    body {
-      font-size: 20px;
-    }
-
-    p {
-      font-size: 1rem;
-    }
-
-    h1 {
-      font-size: 3rem;
-      line-height: 120%;
-      font-weight: 500;
-    }
-
-    h2 {
-      font-size: 2rem;
-      font-weight: 500;
-    }
-
-    h3 {
-      font-size: 1.5rem;
-      font-weight: 500;
-    }
-
-    h4 {
-      font-size: 1rem;
-      font-weight: 500;
-    }
-
-    @media (max-width: 640px) {
-      body {
-        font-size: 16px;
-      }
-
-      p {
-        font-size: 1rem;
-      }
-
-      h1 {
-        font-size: 2.688rem;
-      }
-
-      h2 {
-        font-size: 2.25rem;
-      }
-
-      h3 {
-        font-size: 1.625rem;
-      }
-
-      h4 {
-        font-size: 1.125rem;
-      }
-    }
-  } */
 
   @layer components {
     .btn-primary {
@@ -139,23 +74,6 @@
     }
   }
 }
-
-/* custom scrollbar */
-/* ::-webkit-scrollbar {
-  width: 10px;
-}
-
-::-webkit-scrollbar-track {
-  background: #f1f1f1;
-}
-
-::-webkit-scrollbar-thumb {
-  background: #000000;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: #555;
-} */
 
 /* markdown style */
 .content p {
