@@ -2,6 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
+@reference "tailwindcss";
+
 @layer base {
   @font-face {
     font-family: "Grotesk";
@@ -41,28 +43,28 @@
 
   @layer components {
     .btn-primary {
-      @apply rounded-xl bg-dark px-[35px] py-5 text-white transition-all duration-200;
+      @apply bg-dark rounded-xl px-[35px] py-5 text-white transition-all duration-200;
     }
     .btn-primary:hover {
-      @apply scale-105 transform bg-green text-black;
+      @apply bg-green scale-105 transform text-black;
     }
 
     .btn-secondary {
       @apply rounded-xl border border-solid border-black bg-transparent px-[35px] py-5 text-black transition-all duration-200;
     }
     .btn-secondary:hover {
-      @apply scale-105 transform border-green bg-black text-white;
+      @apply border-green scale-105 transform bg-black text-white;
     }
 
     .btn-tertiary {
-      @apply rounded-xl bg-green px-[35px] py-5 text-black transition-all duration-200;
+      @apply bg-green rounded-xl px-[35px] py-5 text-black transition-all duration-200;
     }
     .btn-tertiary:hover {
       @apply scale-105 transform bg-white text-black;
     }
 
     .greenhead {
-      @apply rounded-xl bg-green px-2 py-1 text-black;
+      @apply bg-green rounded-xl px-2 py-1 text-black;
     }
 
     .whitehead {
