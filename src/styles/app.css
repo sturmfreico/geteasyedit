@@ -30,7 +30,8 @@
 @theme {
   --font-grotesk: "Grotesk", "sans-serif";
 
-  --color-primary: #b9ff66;
+  /* --color-primary: #b9ff66; */
+  --color-primary: #9fe870;
   --color-primary-darker: #7fe141;
   --color-secondary: #173402;
   --color-dark: #191a23;

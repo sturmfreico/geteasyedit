@@ -5,7 +5,7 @@ import Section from "./Section.astro";
 import HeroIlust from "../../assets/pics/hero.svg";
 ---
 
-<Section id="home" className="pb-20">
+<Section id="home" className="pt-10 pb-20">
   <div
     class="relative flex flex-col-reverse items-center md:flex-row"
     id="hero"
@@ -13,8 +13,13 @@ import HeroIlust from "../../assets/pics/hero.svg";
     <div class="row items-center md:w-6/12">
       <div class="space-y-8 text-left">
         <div class="mb-4 flex justify-center md:justify-start">
-          <span
+          <!-- <span
             class="inline-flex items-center rounded-full bg-blue-100 px-3 py-1 text-sm font-medium text-blue-800"
+          >
+            ⚡ Save 80% on support tickets
+          </span> -->
+          <span
+            class="text-secondary inline-flex items-center rounded-full bg-[#e2f6d5] px-3 py-1 text-sm font-medium"
           >
             ⚡ Save 80% on support tickets
           </span>
@@ -27,12 +32,19 @@ import HeroIlust from "../../assets/pics/hero.svg";
           <br />
           Shopify orders
         </h1>
-        <p
+        <!-- <p
           class="mt-6 mb-8 text-center text-lg leading-relaxed font-normal text-gray-600 sm:mb-12 md:pr-12 md:text-left"
         >
           Stop drowning in "can you change my order" tickets. Our app empowers
           customers to modify their orders themselves, saving your team hours
           daily while boosting customer satisfaction.
+        </p> -->
+        <p
+          class="mt-6 mb-8 text-center text-lg leading-relaxed font-normal text-gray-600 sm:mb-12 md:pr-12 md:text-left"
+        >
+          Stop drowning in "can you change my order" requests. Our app empowers
+          customers to modify their own orders, saving your team hours of
+          support.
         </p>
         <div
           class="space-y-4 md:flex md:items-center md:space-y-0 md:space-x-4"
@@ -49,9 +61,14 @@ import HeroIlust from "../../assets/pics/hero.svg";
             </a>
           </div>
           <div class="text-center md:text-left">
-            <p class="text-sm text-gray-500">
-              <span class="font-semibold text-green-600">Free 14-day trial</span
-              > • No credit card required
+            <p
+              class="flex justify-center gap-2 text-sm text-gray-500 md:justify-start"
+            >
+              <span class="font-semibold text-green-600">
+                Free 14-day trial
+              </span>
+              <span>•</span>
+              <span>No credit card required</span>
             </p>
           </div>
         </div>
@@ -84,7 +101,7 @@ import HeroIlust from "../../assets/pics/hero.svg";
             </svg>
             <span>Works with any theme</span>
           </div>
-          <div class="flex items-center space-x-2">
+          <!-- <div class="flex items-center space-x-2">
             <svg
               class="h-5 w-5 text-green-500"
               fill="currentColor"
@@ -96,11 +113,13 @@ import HeroIlust from "../../assets/pics/hero.svg";
                 clip-rule="evenodd"></path>
             </svg>
             <span>No revenue share</span>
-          </div>
+          </div> -->
         </div>
       </div>
     </div>
-    <div class="mb-8 flex items-center md:mb-0 md:w-6/12 md:justify-end">
+    <div
+      class="mb-8 flex max-w-2xs items-center md:mb-0 md:w-6/12 md:max-w-max md:justify-end"
+    >
       <Image
         src={HeroIlust}
         alt="Shopify Order Editing App Dashboard"
