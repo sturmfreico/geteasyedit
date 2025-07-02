@@ -10,10 +10,10 @@ const { index, title, description } = Astro.props;
 
 <div
   id="accordion__item"
-  class="accordion__item group h-[160px] bg-[#F3F3F3] overflow-hidden w-full transition-all duration-500 mb-[30px] rounded-[45px] border border-dark shadow-[0px_5px_0px_#191a23]"
+  class="accordion__item group border-dark mb-[30px] h-[160px] w-full overflow-hidden rounded-[45px] border bg-[#F3F3F3] shadow-[0px_5px_0px_#191a23] transition-all duration-500"
 >
   <button
-    class="accordion__toggle w-full h-[160px] flex items-center justify-between p-[60px] cursor-pointer"
+    class="accordion__toggle flex h-[160px] w-full cursor-pointer items-center justify-between p-[60px]"
     id={`${title} accordion__item menu button`}
     aria-expanded="false"
     aria-controls={`${title} accordion__item menu content`}
@@ -23,10 +23,10 @@ const { index, title, description } = Astro.props;
       {title}
     </div>
     <div
-      class="bg-gray w-[58px] h-[58px] flex justify-center items-center rounded-full border border-dark"
+      class="bg-gray border-dark flex h-[58px] w-[58px] items-center justify-center rounded-full border"
     >
       <div
-        class="accordion__icon h-10 w-10 transition-transform duration-300 flex justify-center items-center relative"
+        class="accordion__icon relative flex h-10 w-10 items-center justify-center transition-transform duration-300"
         aria-hidden="true"
       >
       </div>
@@ -37,8 +37,8 @@ const { index, title, description } = Astro.props;
     aria-labelledby={`${title} accordion__item menu button `}
     class="accordion__content px-[60px]"
   >
-    <div class="w-full h-[2px] bg-black"></div>
-    <p class="prose mb-4 mt-1 max-w-full pt-5 pb-[60px] transition-[height]">
+    <div class="h-[2px] w-full bg-black"></div>
+    <p class="prose mt-1 mb-4 max-w-full pt-5 pb-[60px] transition-[height]">
       {description}
     </p>
   </div>
@@ -73,7 +73,7 @@ const { index, title, description } = Astro.props;
 <script>
   function accordionSetup() {
     const accordionItems = document.querySelectorAll(
-      ".accordion__item"
+      ".accordion__item",
     ) as NodeListOf<HTMLElement>;
 
     accordionItems.forEach((accordionItem) => {
@@ -97,7 +97,7 @@ const { index, title, description } = Astro.props;
 
               if (otherAccordionToggle && otherAccordionIcon) {
                 otherAccordionItem.classList.remove("active");
-                otherAccordionItem.classList.remove("bg-green");
+                otherAccordionItem.classList.remove("bg-primary");
                 otherAccordionToggle.setAttribute("aria-expanded", "false");
                 otherAccordionItem.style.height = "160px";
                 otherAccordionIcon.classList.remove("rotate-180");
@@ -113,7 +113,7 @@ const { index, title, description } = Astro.props;
 
             // Set height according to content
             accordionItem.style.height = accordionItem.scrollHeight + "px";
-            accordionItem.classList.add("bg-green");
+            accordionItem.classList.add("bg-primary");
             accordionIcon.classList.add("rotate-180");
             accordionIcon.classList.add("collapsed");
           } else {
@@ -124,7 +124,7 @@ const { index, title, description } = Astro.props;
             // height is 60, because the toggle's height is 60, the content is hidden
             accordionItem.style.height = "160px";
             accordionIcon.classList.remove("rotate-180");
-            accordionItem.classList.remove("bg-green");
+            accordionItem.classList.remove("bg-primary");
             accordionIcon.classList.remove("collapsed");
           }
 
@@ -147,7 +147,7 @@ const { index, title, description } = Astro.props;
           !accordionItem.contains(event.target as Node)
         ) {
           accordionItem.classList.remove("active");
-          accordionItem.classList.remove("bg-green");
+          accordionItem.classList.remove("bg-primary");
           accordionToggle.setAttribute("aria-expanded", "false");
 
           // Reset height. Overflow gets hidden

@@ -4,7 +4,7 @@ import Testimonials from "../../data/clientData.json";
 const processedTestimonials = Testimonials.map((item, index, array) => ({
   ...item,
   index: index + 1,
-  length: array.length
+  length: array.length,
 }));
 ---
 
@@ -12,14 +12,14 @@ const processedTestimonials = Testimonials.map((item, index, array) => ({
   id="ProjectSlider"
   class="swiper mt-10"
   style={{
-    "--swiper-pagination-color": "var(--green)",
+    "--swiper-pagination-color": "var(--color-primary)",
     "--swiper-pagination-bullet-inactive-color": "#fff",
     "--swiper-pagination-bullet-inactive-opacity": "1",
     "--swiper-pagination-bullet-size": "19px",
     "--swiper-pagination-bullet-horizontal-gap": "10px",
   }}
 >
-  <div class="swiper-wrapper mt-[84px] mb-[124px]" data-cursor="swipe">
+  <div class="swiper-wrapper mb-[124px]" data-cursor="swipe">
     {
       processedTestimonials.map((item) => (
         <div
@@ -27,21 +27,19 @@ const processedTestimonials = Testimonials.map((item, index, array) => ({
           role="group"
           aria-label={`${item.index} / ${item.length}`}
         >
-          <div class="flex flex-col justify-center items-center py-[48px] px-6 sm:px-[52px]">
-            <p class="bubble">
-              "{item.comment}"
-            </p>
+          <div class="flex flex-col items-center justify-center px-12 py-12 sm:px-[52px]">
+            <p class="bubble">"{item.comment}"</p>
           </div>
-          <div class="w-full px-10 sm:px-20 ">
-            <div class="text-green font-medium">{item.name}</div>
+          <div class="w-full px-12 pb-4 sm:px-20">
+            <div class="text-primary font-medium">{item.name}</div>
             <div>{item.role}</div>
           </div>
         </div>
       ))
     }
   </div>
-  <div class="flex justify-around lg:justify-center mb-[68px] lg:gap-[189px]">
-    <div class="swiper-button-prev w-7 h-7 sm:w-10 sm:h-10">
+  <div class="mb-12 flex justify-around lg:justify-center lg:gap-[189px]">
+    <div class="swiper-button-prev h-7 w-7 sm:h-10 sm:w-10">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"
         ><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
         <path
@@ -51,7 +49,7 @@ const processedTestimonials = Testimonials.map((item, index, array) => ({
       >
     </div>
     <div class="swiper-pagination"></div>
-    <div class="swiper-button-next w-7 h-7 sm:w-10 sm:h-10 rotate-180">
+    <div class="swiper-button-next h-7 w-7 rotate-180 sm:h-10 sm:w-10">
       <svg xmlns="http://www.w3.org/2000/svg " viewBox="0 0 448 512">
         <path
           fill="#ffffff"
@@ -102,10 +100,10 @@ const processedTestimonials = Testimonials.map((item, index, array) => ({
   .bubble {
     position: relative;
     padding: 8%;
-    background-color: var(--dark);
-    color: var(--gray);
+    background-color: var(--color-dark);
+    color: var(--color-gray);
     border-radius: 45px;
-    border: 1px solid var(--green);
+    border: 1px solid var(--color-primary);
   }
   .bubble:after {
     content: "";
@@ -114,7 +112,7 @@ const processedTestimonials = Testimonials.map((item, index, array) => ({
     left: 50px; /* Adjust this value to move the arrow left or right */
     border-width: 22px; /* Adjust this value to change the size of the arrow */
     border-style: solid;
-    border-color: var(--dark) transparent transparent var(--dark);
+    border-color: var(--color-dark) transparent transparent var(--color-dark);
   }
   .bubble:before {
     content: "";
@@ -123,10 +121,15 @@ const processedTestimonials = Testimonials.map((item, index, array) => ({
     left: 48px; /* This should be 1px less than the left value of .bubble:after */
     border-width: 20px; /* Adjust this to match the border-width of .bubble:after */
     border-style: solid;
-    border-color: var(--green) transparent transparent var(--green);
+    border-color: var(--color-primary) transparent transparent
+      var(--color-primary);
+  }
+  .swiper {
+    /* max-height: 600px; */
   }
   .swiper-wrapper {
     position: relative;
+    margin-bottom: 30px;
   }
   .swiper-slide {
     display: flex;

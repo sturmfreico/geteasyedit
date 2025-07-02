@@ -16,18 +16,18 @@ const { index, titleTop, titleBottom, img, alt, link } = Astro.props;
 
 <Card isUnderline={true}>
   <div
-    class=`h-[300px] w-full sm:h-full lg:gap-[60px] grid custom-grid lg:grid-cols-2 lg:grid-rows-1 p-8 sm:p-[50px] rounded-[45px] ${index === 1 ? 'bg-gray' : index === 2 ? 'bg-green' : 'bg-dark text-gray'}`
+    class=`h-[300px] w-full sm:h-full lg:gap-[60px] grid custom-grid lg:grid-cols-2 lg:grid-rows-1 p-8 sm:p-[50px] rounded-[45px] ${index === 1 ? 'bg-gray' : index === 2 ? 'bg-primary' : 'bg-dark text-gray'}`
   >
     <h3 class=`flex flex-col col-span-2 lg:col-span-1 text-xl`>
-      <span class=`w-[fit-content] ${index === 1 ? 'greenhead' : 'whitehead'}`>
+      <span class=`w-fit ${index === 1 ? 'greenhead' : 'whitehead'}`>
         {titleTop}
       </span>
-      <span class=`w-[fit-content] ${index === 1 ? 'greenhead' : 'whitehead'}`>
+      <span class=`w-fit ${index === 1 ? 'greenhead' : 'whitehead'}`>
         {titleBottom}
       </span>
     </h3>
     <picture
-      class="order-1 row-span-1 flex h-full w-full items-center justify-center lg:order-none lg:row-span-2"
+      class="order-1 row-span-1 flex h-full w-full items-center justify-center lg:order-0 lg:row-span-2"
     >
       <Image
         src={img}

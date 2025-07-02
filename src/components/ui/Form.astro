@@ -6,7 +6,7 @@ import decorForm from "../../assets/pics/contact-pic.png";
 <div
   class="relative flex items-center justify-start overflow-hidden rounded-[45px] bg-[#F3F3F3] p-[60px]"
 >
-  <form class="h-full w-full bg-gray sm:p-6 lg:max-w-lg">
+  <form class="bg-gray h-full w-full sm:p-6 lg:max-w-lg">
     <div class="mb-10 flex flex-col gap-[35px] sm:flex-row sm:items-center">
       <div class="flex items-center gap-[14px]">
         <input
@@ -64,7 +64,7 @@ import decorForm from "../../assets/pics/contact-pic.png";
 
     <button type="submit" name="submit" class="btn-primary w-full">Send</button>
   </form>
-  <picture class="absolute bottom-[2%] right-[-25%] top-[2%] hidden lg:block">
+  <picture class="absolute top-[2%] right-[-25%] bottom-[2%] hidden lg:block">
     <Image src={decorForm} alt="decor" />
   </picture>
 </div>
@@ -89,7 +89,7 @@ import decorForm from "../../assets/pics/contact-pic.png";
     position: absolute;
     top: 0;
     left: 0;
-    background: var(--green);
+    background: var(--color-primary);
     transform: scale(0);
     transition: transform 0.1s ease-in-out;
   }

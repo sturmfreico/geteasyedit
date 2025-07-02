@@ -33,15 +33,15 @@ import SectionTitle from "../ui/SectionTitle.astro";
     sectionTitle="Case Studies"
     description="Explore Real-Life Examples of Our Proven Digital Marketing Success through Our Case Studies"
   />
-  <div class="flex flex-col lg:flex-row justify-between rounded-[45px] p-1">
+  <div class="flex flex-col justify-between rounded-[45px] p-1 lg:flex-row">
     {
       cards.map((card) => (
         <Card>
-          <div class="flex p-[60px] h-full bg-dark text-gray rounded-[45px] m-[1px]">
+          <div class="bg-dark text-gray m-px flex h-full rounded-[45px] p-[60px]">
             <div class="flex flex-col gap-5">
               <p>{card.title}</p>
               <a href={card.link} class="flex items-center gap-[15px]">
-                <span class="text-green">Case Info</span>
+                <span class="text-primary">Case Info</span>
                 <picture>
                   <Image src={larrow} alt="Arrow pointing up right" />
                 </picture>

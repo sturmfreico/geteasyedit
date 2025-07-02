@@ -1,8 +1,4 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-@reference "tailwindcss";
+@import "tailwindcss";
 
 @layer base {
   @font-face {
@@ -29,55 +25,58 @@
     -webkit-text-stroke: 1.2px black;
     background-color: transparent;
   }
+}
 
-  :root {
-    /* --green: #b9ff66; */
-    --green: #9ee772;
-    --green-hover: #7fe141;
-    --dark: #191a23;
-    --dark-green: #173402;
-    --gray: #f3f3f3;
-    --color-green-hover: #7fe141;
-    --color-dark-green: #173402;
+@theme {
+  --font-grotesk: "Grotesk", "sans-serif";
+
+  --color-primary: #b9ff66;
+  --color-primary-darker: #7fe141;
+  --color-secondary: #173402;
+  --color-dark: #191a23;
+  --color-gray: #f3f3f3;
+}
+
+@layer components {
+  @reference "tailwindcss";
+
+  .btn-primary {
+    @apply bg-dark rounded-xl px-[35px] py-5 text-white transition-all duration-200;
+  }
+  .btn-primary:hover {
+    @apply bg-primary scale-105 transform text-black;
   }
 
-  @layer components {
-    .btn-primary {
-      @apply bg-dark rounded-xl px-[35px] py-5 text-white transition-all duration-200;
-    }
-    .btn-primary:hover {
-      @apply bg-green scale-105 transform text-black;
-    }
+  .btn-secondary {
+    @apply rounded-xl border border-solid border-black bg-transparent px-[35px] py-5 text-black transition-all duration-200;
+  }
+  .btn-secondary:hover {
+    @apply border-primary scale-105 transform bg-black text-white;
+  }
 
-    .btn-secondary {
-      @apply rounded-xl border border-solid border-black bg-transparent px-[35px] py-5 text-black transition-all duration-200;
-    }
-    .btn-secondary:hover {
-      @apply border-green scale-105 transform bg-black text-white;
-    }
+  .btn-tertiary {
+    @apply bg-primary rounded-xl px-[35px] py-5 text-black transition-all duration-200;
+  }
+  .btn-tertiary:hover {
+    @apply scale-105 transform bg-white text-black;
+  }
 
-    .btn-tertiary {
-      @apply bg-green rounded-xl px-[35px] py-5 text-black transition-all duration-200;
-    }
-    .btn-tertiary:hover {
-      @apply scale-105 transform bg-white text-black;
-    }
+  .greenhead {
+    @apply bg-primary rounded-xl px-2 py-1 text-black;
+  }
 
-    .greenhead {
-      @apply bg-green rounded-xl px-2 py-1 text-black;
-    }
+  .whitehead {
+    @apply rounded-xl bg-white px-2 py-1 text-black;
+  }
 
-    .whitehead {
-      @apply rounded-xl bg-white px-2 py-1 text-black;
-    }
-
-    .blackhead {
-      @apply rounded-xl bg-black px-2 py-1 text-white;
-    }
+  .blackhead {
+    @apply rounded-xl bg-black px-2 py-1 text-white;
   }
 }
 
-/* markdown style */
+/** 
+ * Markdown styles
+ */
 .content p {
   margin: 20px 0;
   font-size: 1.1rem;
