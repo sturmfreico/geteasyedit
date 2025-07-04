@@ -5,15 +5,14 @@ import Card from "../components/ui/Card.astro";
 ---
 
 <MainLayout title="Our Pricing">
-  <main class="space-y-20">
-    <div class="mx-auto max-w-(--breakpoint-xl) px-4 py-8 lg:px-3 lg:py-16">
+  <main class="mx-auto px-5">
+    <div class="mx-auto w-full max-w-[1280px] py-8 lg:py-16">
       <div class="mx-auto mb-8 max-w-(--breakpoint-md) text-center lg:mb-12">
         <h2 class="mb-4 text-4xl font-extrabold tracking-tight text-gray-900">
-          Designed for business teams like yours
+          Plans
         </h2>
         <p class="mb-5 font-light text-gray-500 sm:text-xl">
-          Here at Positivus we focus on markets where technology, innovation,
-          and capital can unlock long-term value and drive economic growth.
+          Choose the plan that's right for you.
         </p>
       </div>
       <div
@@ -21,7 +20,7 @@ import Card from "../components/ui/Card.astro";
       >
         {
           priceData.map((item) => (
-            <Card isUnderline={true}>
+            <Card className="bg-gray hover:shadow-xl transition-shadow duration-500">
               <div class="mx-auto flex max-w-lg flex-col p-6 text-center">
                 <h3 class="mb-4 text-2xl font-semibold">{item.title}</h3>
                 <p class="font-light text-gray-500 sm:text-lg">
@@ -34,96 +33,36 @@ import Card from "../components/ui/Card.astro";
                   <span class="text-gray-500">/month</span>
                 </div>
                 <ul role="list" class="mb-8 space-y-4 text-left">
-                  <li class="flex items-center space-x-3">
-                    <svg
-                      class="h-5 w-5 shrink-0 text-green-500"
-                      fill="currentColor"
-                      viewBox="0 0 20 20"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        fill-rule="evenodd"
-                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                        clip-rule="evenodd"
-                      />
-                    </svg>
-                    <span>Individual configuration</span>
-                  </li>
-                  <li class="flex items-center space-x-3">
-                    <svg
-                      class="h-5 w-5 shrink-0 text-green-500"
-                      fill="currentColor"
-                      viewBox="0 0 20 20"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        fill-rule="evenodd"
-                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                        clip-rule="evenodd"
-                      />
-                    </svg>
-                    <span>No setup, or hidden fees</span>
-                  </li>
-                  <li class="flex items-center space-x-3">
-                    <svg
-                      class="h-5 w-5 shrink-0 text-green-500"
-                      fill="currentColor"
-                      viewBox="0 0 20 20"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        fill-rule="evenodd"
-                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                        clip-rule="evenodd"
-                      />
-                    </svg>
-                    <span>
-                      Team size:{" "}
-                      <span class="font-semibold">{item.devCount}</span>
-                    </span>
-                  </li>
-                  <li class="flex items-center space-x-3">
-                    <svg
-                      class="h-5 w-5 shrink-0 text-green-500"
-                      fill="currentColor"
-                      viewBox="0 0 20 20"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        fill-rule="evenodd"
-                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                        clip-rule="evenodd"
-                      />
-                    </svg>
-                    <span>
-                      Premium support:{" "}
-                      <span class="font-semibold">{item.support}</span>
-                    </span>
-                  </li>
-                  <li class="flex items-center space-x-3">
-                    <svg
-                      class="h-5 w-5 shrink-0 text-green-500"
-                      fill="currentColor"
-                      viewBox="0 0 20 20"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        fill-rule="evenodd"
-                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                        clip-rule="evenodd"
-                      />
-                    </svg>
-                    <span>
-                      Free updates:{" "}
-                      <span class="font-semibold">{item.update}</span>
-                    </span>
-                  </li>
+                  {item.features.map((feature) => (
+                    <li class="flex items-center space-x-3">
+                      <svg
+                        class="h-5 w-5 shrink-0 text-green-500"
+                        fill="currentColor"
+                        viewBox="0 0 20 20"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                          clip-rule="evenodd"
+                        />
+                      </svg>
+                      <span>{feature}</span>
+                    </li>
+                  ))}
                 </ul>
-                <a
+                {/* <a
                   href={item.link}
                   class="bg-primary rounded-lg px-5 py-2.5 text-center text-sm font-medium text-black hover:bg-black hover:text-white focus:ring-4 focus:ring-green-200"
                 >
                   {item.action}
+                </a> */}
+                <a
+                  href="https://shopify.com"
+                  target="_blank"
+                  class="text-secondary bg-primary rounded-xl px-8 py-5 text-center text-lg leading-7 font-normal hover:bg-[#7fe141]"
+                >
+                  Start Free Trial
                 </a>
               </div>
             </Card>

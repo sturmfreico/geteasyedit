@@ -14,7 +14,7 @@ import wob from "../../assets/icon7.svg";
 const { index, titleTop, subtitle, img, alt, link } = Astro.props;
 ---
 
-<Card isUnderline={true}>
+<Card>
   <div
     class=`h-[300px] w-full sm:h-full lg:gap-[60px] grid custom-grid lg:grid-cols-2 lg:grid-rows-1 p-8 sm:p-[50px] rounded-base ${index === 1 ? 'bg-gray' : index === 2 ? 'bg-primary' : 'bg-dark text-gray'}`
   >
