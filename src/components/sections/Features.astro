@@ -13,48 +13,43 @@ import c6 from "../../assets/pics/card-pic6.png";
 const cards = [
   {
     index: 1,
-    titleTop: "Order",
-    titleBottom: "Modifications",
+    titleTop: "Unlimited Order Edits",
     img: c1,
     alt: "Order Modifications",
     link: "https://shopify.com",
   },
   {
     index: 2,
-    titleTop: "Shipping Address",
-    titleBottom: "Updates",
+    titleTop: "Analytics Dashboard",
     img: c2,
     alt: "Shipping Updates",
     link: "https://shopify.com",
   },
   {
     index: 3,
-    titleTop: "Product",
-    titleBottom: "Swapping",
+    titleTop: "Easy Onboarding",
     img: c3,
     alt: "Product Swapping",
     link: "https://shopify.com",
   },
   {
     index: 1,
-    titleTop: "Real-time",
-    titleBottom: "Notifications",
+    titleTop: "Chat & Email Support",
     img: c4,
     alt: "Notifications",
     link: "https://shopify.com",
   },
   {
     index: 2,
-    titleTop: "Order",
-    titleBottom: "Cancellation",
+    titleTop: "No Hidden Fees",
     img: c5,
     alt: "Order Cancellation",
     link: "https://shopify.com",
   },
   {
     index: 3,
-    titleTop: "Inventory",
-    titleBottom: "Sync",
+    titleTop: "Custom Edit Window",
+    subtitle: "*For advanced plan users",
     img: c6,
     alt: "Inventory Sync",
     link: "https://shopify.com",
@@ -74,7 +69,7 @@ const description =
           <ServiceCard
             index={card.index}
             titleTop={card.titleTop}
-            titleBottom={card.titleBottom}
+            subtitle={card?.subtitle}
             img={card.img}
             alt={card.alt}
             link={card.link}

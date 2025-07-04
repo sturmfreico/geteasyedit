@@ -9,7 +9,7 @@ const { title, description } = Astro.props;
 
 <div
   id="accordion__item"
-  class="accordion__item group border-dark mb-[30px] h-[160px] w-full overflow-hidden rounded-[45px] border bg-[#F3F3F3] shadow-[0px_5px_0px_#191a23] transition-all duration-500"
+  class="accordion__item group border-dark rounded-base mb-[30px] h-[160px] w-full overflow-hidden border bg-[#F3F3F3] shadow-[0px_5px_0px_#191a23] transition-all duration-500"
 >
   <button
     class="accordion__toggle flex h-[160px] w-full cursor-pointer items-center justify-between p-[60px]"
@@ -36,7 +36,9 @@ const { title, description } = Astro.props;
     class="accordion__content px-[60px]"
   >
     <div class="h-[2px] w-full bg-black"></div>
-    <p class="prose text-base mt-1 mb-4 max-w-full pt-5 pb-[60px] transition-[height]">
+    <p
+      class="prose mt-1 mb-4 max-w-full pt-5 pb-[60px] text-base transition-[height]"
+    >
       {description}
     </p>
   </div>
