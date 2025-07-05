@@ -9,22 +9,22 @@ const { title, description } = Astro.props;
 
 <div
   id="accordion__item"
-  class="accordion__item group rounded-base mb-[30px] h-[160px] w-full overflow-hidden bg-[#F3F3F3] shadow-lg transition-all duration-500 hover:shadow-xl"
+  class="accordion__item group rounded-base mb-[30px] h-36 w-full overflow-hidden bg-[#F3F3F3] shadow-lg transition-all duration-500 hover:shadow-xl"
 >
   <button
-    class="accordion__toggle flex h-[160px] w-full cursor-pointer items-center justify-between p-[60px]"
+    class="accordion__toggle flex h-36 w-full cursor-pointer items-center justify-between p-8 lg:p-14"
     id={`${title} accordion__item menu button`}
     aria-expanded="false"
     aria-controls={`${title} accordion__item menu content`}
   >
     <div class="flex items-center gap-[25px]">
-      <span class="text-lg font-semibold">{title}</span>
+      <span class="text-md text-left font-semibold">{title}</span>
     </div>
     <div
-      class="bg-gray border-dark flex h-[58px] w-[58px] items-center justify-center rounded-full border"
+      class="bg-gray border-dark ml-2.5 flex h-10 min-h-10 w-10 min-w-10 items-center justify-center rounded-full border"
     >
       <div
-        class="accordion__icon relative flex h-10 w-10 items-center justify-center transition-transform duration-300"
+        class="accordion__icon relative flex h-5 w-5 items-center justify-center transition-transform duration-300"
         aria-hidden="true"
       >
       </div>
@@ -33,12 +33,10 @@ const { title, description } = Astro.props;
   <div
     id={`${title} accordion__item menu content`}
     aria-labelledby={`${title} accordion__item menu button `}
-    class="accordion__content px-[60px]"
+    class="accordion__content px-8 lg:p-14"
   >
     <div class="h-[2px] w-full bg-black"></div>
-    <p
-      class="prose mt-1 mb-4 max-w-full pt-5 pb-[60px] text-base transition-[height]"
-    >
+    <p class="prose mt-1 mb-4 max-w-full py-5 text-base transition-[height]">
       {description}
     </p>
   </div>
@@ -54,15 +52,15 @@ const { title, description } = Astro.props;
 
   .accordion__icon::before {
     width: 100%;
-    height: 6px; /* Increased from 2px to 6px */
+    height: 2px; /* Increased from 2px to 6px */
     left: 0;
-    top: calc(50% - 3px); /* Adjusted to center the thicker line */
+    top: calc(50% - 1px); /* Adjusted to center the thicker line */
   }
 
   .accordion__icon::after {
-    width: 6px; /* Increased from 2px to 6px */
+    width: 2px; /* Increased from 2px to 6px */
     height: 100%;
-    left: calc(50% - 3px); /* Adjusted to center the thicker line */
+    left: calc(50% - 1px); /* Adjusted to center the thicker line */
     top: 0;
   }
 
@@ -99,7 +97,7 @@ const { title, description } = Astro.props;
                 otherAccordionItem.classList.remove("active");
                 otherAccordionItem.classList.remove("bg-primary");
                 otherAccordionToggle.setAttribute("aria-expanded", "false");
-                otherAccordionItem.style.height = "160px";
+                otherAccordionItem.style.height = "144px";
                 otherAccordionIcon.classList.remove("rotate-180");
                 otherAccordionIcon.classList.remove("collapsed");
               }
@@ -122,7 +120,7 @@ const { title, description } = Astro.props;
 
             // Reset height. Accordion Items have Overflow hidden so when it's
             // height is 60, because the toggle's height is 60, the content is hidden
-            accordionItem.style.height = "160px";
+            accordionItem.style.height = "144px";
             accordionIcon.classList.remove("rotate-180");
             accordionItem.classList.remove("bg-primary");
             accordionIcon.classList.remove("collapsed");
@@ -151,7 +149,7 @@ const { title, description } = Astro.props;
           accordionToggle.setAttribute("aria-expanded", "false");
 
           // Reset height. Overflow gets hidden
-          accordionItem.style.height = "160px";
+          accordionItem.style.height = "144px";
           accordionIcon.classList.remove("rotate-180");
           accordionIcon.classList.remove("collapsed");
         }
