@@ -10,7 +10,9 @@ const { sectionTitle, description } = Astro.props;
   >
     {sectionTitle}
   </h2>
-  <p class="w-auto text-center md:text-left">
-    {description}
-  </p>
+  {description && (
+    <p class="w-auto text-center md:text-left">
+      {description}
+    </p>
+  )}
 </div>
