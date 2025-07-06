@@ -5,6 +5,20 @@ import { getCollection } from "astro:content";
 import type { CollectionEntry } from "astro:content";
 import { capitalize } from "../../../utils";
 
+export async function getStaticPaths() {
+  const allBlogArticles: CollectionEntry<"blog">[] =
+    await getCollection("blog");
+
+  // Extract all unique tags from all articles
+  const allTags = [
+    ...new Set(allBlogArticles.flatMap((article) => article.data.tags)),
+  ];
+
+  return allTags.map((tag) => ({
+    params: { tag },
+  }));
+}
+
 const { tag } = Astro.params;
 
 if (tag === undefined) {
