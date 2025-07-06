@@ -18,18 +18,23 @@ const sponsors = [
 ];
 ---
 
-<Section id="sponsors">
+<Section id="sponsors" className="mt-8">
   <div class="flex-row items-center">
-  <div class="grid grid-cols-3 sm:grid-cols-3 md:grid-cols-6">
-    {
-      sponsors.map((sponsor) => {
-        return (
-          <div class="p-4 grayscale transition duration-200 hover:grayscale-0">
-            <Image src={sponsor.logo} class="h-12 w-auto mx-auto" alt={sponsor.alt} loading="lazy" />
-          </div>
-        );
-      })
-    }
+    <div class="grid grid-cols-3 sm:grid-cols-3 md:grid-cols-6">
+      {
+        sponsors.map((sponsor) => {
+          return (
+            <div class="p-4 grayscale transition duration-200 hover:grayscale-0">
+              <Image
+                src={sponsor.logo}
+                class="mx-auto h-12 w-auto"
+                alt={sponsor.alt}
+                loading="lazy"
+              />
+            </div>
+          );
+        })
+      }
+    </div>
   </div>
-  </div> 
 </Section>
