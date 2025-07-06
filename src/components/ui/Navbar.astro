@@ -1,5 +1,6 @@
 ---
-import { Astronav, MenuItems, MenuIcon } from "astro-navbar";
+// import { Astronav, MenuItems, MenuIcon } from "astro-navbar";
+import { Astronav } from "astro-navbar";
 
 const menuitems = [
   { href: "/#features", label: "Features" },
@@ -8,16 +9,16 @@ const menuitems = [
   { href: "/pricing", label: "Pricing" },
 ];
 
-const navButton = {
-  href: "https://github.com/manulthanura/Positivus",
-  label: "Request a quote",
-};
+// const navButton = {
+//   href: "https://github.com/manulthanura/Positivus",
+//   label: "Request a quote",
+// };
 ---
 
 <div class="mt-20">
   <nav class="fixed top-0 left-0 z-50 w-full bg-white/60 px-5 backdrop-blur">
     <header
-      class="mx-auto my-5 flex w-full max-w-[1280px] flex-col items-center justify-between lg:flex-row"
+      class="mx-auto my-5 flex w-full max-w-7xl flex-col items-center justify-between lg:flex-row"
     >
       <Astronav>
         <div class="flex w-full items-center justify-between lg:w-auto">
@@ -68,7 +69,7 @@ const navButton = {
             class="mt-4 flex flex-col rounded-lg border p-4 font-medium lg:mt-0 lg:flex-row lg:space-x-8 lg:border-0 lg:p-0"
           >
             {
-              menuitems.map((item, index) => (
+              menuitems.map((item) => (
                 <li>
                   <a
                     href={item.href}

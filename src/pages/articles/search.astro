@@ -10,21 +10,21 @@ const query: string | null = Astro.url.searchParams.get("query");
 const allBlogArticles: CollectionEntry<"blog">[] = await getCollection("blog");
 
 // Filter articles based on query
-const searchResults = allBlogArticles.filter((article) => {
-  const titleMatch: boolean = article.data.title
-    .toLowerCase()
-    .includes(query!.toLowerCase());
+// const searchResults = allBlogArticles.filter((article) => {
+//   const titleMatch: boolean = article.data.title
+//     .toLowerCase()
+//     .includes(query!.toLowerCase());
 
-  const bodyMatch: boolean = article.body
-    .toLowerCase()
-    .includes(query!.toLowerCase());
+//   const bodyMatch: boolean = article.body
+//     .toLowerCase()
+//     .includes(query!.toLowerCase());
 
-  const slugMatch: boolean = article.slug
-    .toLowerCase()
-    .includes(query!.toLowerCase());
+//   const slugMatch: boolean = article.slug
+//     .toLowerCase()
+//     .includes(query!.toLowerCase());
 
-  return titleMatch || bodyMatch || slugMatch;
-});
+//   return titleMatch || bodyMatch || slugMatch;
+// });
 ---
 
 <MainLayout title="Search Results">
@@ -57,7 +57,7 @@ const searchResults = allBlogArticles.filter((article) => {
       <br />
       <h2 class="mt-6 pb-3 text-2xl">Results For <strong>{query}</strong></h2>
       <div class="grid gap-8 lg:grid-cols-2">
-        {searchResults.map((article) => <ArticleCard article={article} />)}
+        {allBlogArticles.map((article) => <ArticleCard article={article} />)}
       </div>
     </div>
   </main>
