@@ -36,6 +36,8 @@
   --color-secondary: #173402;
   --color-dark: #191a23;
   --color-gray: #f3f3f3;
+  --color-tag-green: #e2f6d5;
+  --color-footer-form: #292a32;
 
   /* 2.75rem = 44px */
   --radius-base: calc(var(--spacing, 0.25rem /* 4px */) * 11);
