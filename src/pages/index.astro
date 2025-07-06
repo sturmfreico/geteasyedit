@@ -9,11 +9,12 @@ import Plans from "../components/sections/Plans.astro";
 // import Team from "../components/sections/Team.astro";
 // import Testimonials from "../components/sections/Testimonials.astro";
 import MainLayout from "../layouts/MainLayout.astro";
+import { config } from "../config.js";
 ---
 
 <MainLayout
-  title="Positivus"
-  description="A beautiful and functional landing page design created specifically for digital marketing agencies. With its clean and modern design, Positivus is the perfect template to showcase your agency's services and case studies to potential clients. Built with astro and tailwindcss"
+  title={config.title}
+  description={config.description}
 >
   <Hero />
   <Features />
