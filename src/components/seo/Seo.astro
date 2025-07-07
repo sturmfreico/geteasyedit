@@ -1,5 +1,5 @@
 ---
-import siteData from "../../data/siteData.json";
+import { config } from "@/config";
 import jsonLDGenerator from "../../utils/jsonLD";
 
 type Props = {
@@ -41,22 +41,19 @@ const jsonLD = jsonLDGenerator({
 <meta property="og:title" content={title} />
 <meta property="og:description" content={description} />
 <meta property="og:url" content={url} />
-<meta property="og:image" content={image?.src || siteData.image.src} />
-<meta property="og:image:url" content={image?.src || siteData.image.src} />
-<meta
-  property="og:image:secure_url"
-  content={image?.src || siteData.image.src}
-/>
+<meta property="og:image" content={image?.src || config.image.src} />
+<meta property="og:image:url" content={image?.src || config.image.src} />
+<meta property="og:image:secure_url" content={image?.src || config.image.src} />
 <meta property="og:image:type" content="image/jpeg" />
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="600" />
-<meta property="og:image:alt" content={image?.alt || siteData.image.alt} />
+<meta property="og:image:alt" content={image?.alt || config.image.alt} />
 
 <!-- Twitter -->
 <meta name="twitter:title" content={title} />
 <meta name="twitter:description" content={description} />
 <meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:image" content={image?.src || siteData.image.src} />
+<meta name="twitter:image" content={image?.src || config.image.src} />
 <meta name="twitter:image:alt" content={title} />
 
 <!-- Using environment domain -->

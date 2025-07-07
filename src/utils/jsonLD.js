@@ -1,4 +1,4 @@
-import siteData from "../data/siteData.json";
+import { config } from "@/config";
 import { slugify } from "./slugify";
 
 export default function jsonLDGenerator({ type, post, url }) {
@@ -28,7 +28,7 @@ export default function jsonLDGenerator({ type, post, url }) {
       {
       "@context": "https://schema.org/",
       "@type": "WebSite",
-      "name": "${siteData.title}",
+      "name": "${config.title}",
       "url": "${import.meta.env.SITE}"
       }
     </script>`;

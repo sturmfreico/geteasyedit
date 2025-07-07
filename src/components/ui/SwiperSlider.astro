@@ -1,7 +1,7 @@
 ---
-import Testimonials from "../../data/clientData.json";
+import { config } from "@/config";
 
-const processedTestimonials = Testimonials.map((item, index, array) => ({
+const processedTestimonials = config.clients.map((item, index, array) => ({
   ...item,
   index: index + 1,
   length: array.length,
@@ -38,7 +38,7 @@ const processedTestimonials = Testimonials.map((item, index, array) => ({
       ))
     }
   </div>
-      <div class="mb-12 flex justify-around lg:justify-center lg:gap-48">
+  <div class="mb-12 flex justify-around lg:justify-center lg:gap-48">
     <div class="swiper-button-prev h-7 w-7 sm:h-10 sm:w-10">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"
         ><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
