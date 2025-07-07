@@ -9,15 +9,15 @@ const { title, description } = Astro.props;
 
 <div
   id="accordion__item"
-  class="accordion__item group rounded-base mb-8 h-36 w-full overflow-hidden bg-gray-100 shadow-lg transition-all duration-500 hover:shadow-xl"
+  class="accordion__item group rounded-base mb-8 h-28 w-full overflow-hidden bg-gray-100 shadow-lg transition-all duration-500 hover:shadow-xl"
 >
   <button
-    class="accordion__toggle flex h-36 w-full cursor-pointer items-center justify-between p-8 lg:p-14"
+    class="accordion__toggle flex h-28 w-full cursor-pointer items-center justify-between px-8 py-6 lg:px-14 lg:py-8"
     id={`${title} accordion__item menu button`}
     aria-expanded="false"
     aria-controls={`${title} accordion__item menu content`}
   >
-          <div class="flex items-center gap-6">
+    <div class="flex items-center gap-6">
       <span class="text-md text-left font-semibold">{title}</span>
     </div>
     <div
@@ -33,9 +33,9 @@ const { title, description } = Astro.props;
   <div
     id={`${title} accordion__item menu content`}
     aria-labelledby={`${title} accordion__item menu button `}
-    class="accordion__content px-8 lg:p-14"
+    class="accordion__content px-8 lg:px-14"
   >
-          <div class="h-0.5 w-full bg-black"></div>
+    <div class="h-0.5 w-full bg-black"></div>
     <p class="prose mt-1 mb-4 max-w-full py-5 text-base transition-[height]">
       {description}
     </p>
@@ -97,7 +97,7 @@ const { title, description } = Astro.props;
                 otherAccordionItem.classList.remove("active");
                 otherAccordionItem.classList.remove("bg-primary");
                 otherAccordionToggle.setAttribute("aria-expanded", "false");
-                otherAccordionItem.style.height = "144px";
+                otherAccordionItem.style.height = "112px";
                 otherAccordionIcon.classList.remove("rotate-180");
                 otherAccordionIcon.classList.remove("collapsed");
               }
@@ -120,7 +120,7 @@ const { title, description } = Astro.props;
 
             // Reset height. Accordion Items have Overflow hidden so when it's
             // height is 60, because the toggle's height is 60, the content is hidden
-            accordionItem.style.height = "144px";
+            accordionItem.style.height = "112px";
             accordionIcon.classList.remove("rotate-180");
             accordionItem.classList.remove("bg-primary");
             accordionIcon.classList.remove("collapsed");
@@ -149,7 +149,7 @@ const { title, description } = Astro.props;
           accordionToggle.setAttribute("aria-expanded", "false");
 
           // Reset height. Overflow gets hidden
-          accordionItem.style.height = "144px";
+          accordionItem.style.height = "112px";
           accordionIcon.classList.remove("rotate-180");
           accordionIcon.classList.remove("collapsed");
         }
