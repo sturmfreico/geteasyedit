@@ -34,14 +34,12 @@ const links = [
               <Image src={Logo} alt="Logo for Kreatif Brand" />
             </a>
           </picture>
-          <ul class="flex flex-col gap-5 sm:flex-row">
+          <ul class="flex flex-col gap-6 sm:flex-row">
             {
               links.map((link) => {
                 return (
                   <li class="text-center">
-                    <a class="underline" href={link.href}>
-                      {link.name}
-                    </a>
+                    <a href={link.href}>{link.name}</a>
                   </li>
                 );
               })
@@ -81,17 +79,32 @@ const links = [
 
       <div class="mb-12 h-px bg-[#262836]"></div>
       <div
-        class="mt-4 flex flex-col justify-center text-center md:mt-0 md:justify-between lg:flex-row"
+        class="mt-4 flex flex-col justify-center text-center text-gray-400 md:mt-0 md:justify-between lg:flex-row"
       >
         <span
-          >© 2025 EasyEdit - A <a
+          >© 2025 EasyEdit - A
+          <a
             href="https://sturmfrei.com.au"
-            class="underline">sturmfrei</a
-          > product</span
+            class="text-[#6d28d9] hover:underline">sturmfrei</a
+          >
+          product
+        </span>
+        <div
+          class="mt-4 flex justify-center gap-2 text-sm text-gray-400 lg:mt-0 lg:justify-normal"
         >
-        <div class="mt-2 flex flex-col gap-2 lg:mt-0 lg:flex-row lg:gap-4">
-          <a href="/terms" class="underline">Terms of Service</a>
-          <a href="/privacy" class="underline">Privacy Policy</a>
+          <a
+            href="/terms"
+            class="transition duration-150 ease-in-out hover:underline"
+          >
+            Terms
+          </a>
+          <span>·</span>
+          <a
+            href="/privacy"
+            class="transition duration-150 ease-in-out hover:underline"
+          >
+            Privacy Policy
+          </a>
         </div>
       </div>
     </div>
