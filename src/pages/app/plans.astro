@@ -1,0 +1,116 @@
+---
+import { config } from '../../config';
+---
+
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Choose Your Plan - EasyEdit</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50">
+  <main class="container mx-auto p-8">
+    <div class="text-center mb-12">
+      <h1 class="text-4xl font-bold text-gray-900 mb-4">Choose Your Plan</h1>
+      <p class="text-xl text-gray-600 mb-6">
+        You need to select a plan to access the admin dashboard
+      </p>
+      <div class="bg-yellow-100 border border-yellow-400 text-yellow-700 px-4 py-3 rounded max-w-2xl mx-auto">
+        ⚠️ <strong>Action Required:</strong> Please select a plan to continue using EasyEdit admin features.
+      </div>
+    </div>
+    
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+      {config.pricing.map((plan, index) => (
+        <div class={`bg-white rounded-lg shadow-lg p-8 ${index === 1 ? 'border-2 border-blue-500 relative' : ''}`}>
+          {index === 1 && (
+            <div class="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+              <span class="bg-blue-500 text-white px-4 py-1 rounded-full text-sm font-semibold">
+                Most Popular
+              </span>
+            </div>
+          )}
+          
+          <div class="text-center">
+            <h3 class="text-2xl font-bold text-gray-900 mb-2">{plan.title}</h3>
+            <p class="text-gray-600 mb-6">{plan.description}</p>
+            
+            <div class="mb-8">
+              <span class="text-5xl font-bold text-gray-900">${plan.price}</span>
+              <span class="text-gray-600">/month</span>
+            </div>
+            
+            <ul class="text-left space-y-3 mb-8">
+              {plan.features.map((feature) => (
+                <li class="flex items-center space-x-3">
+                  <svg class="h-5 w-5 text-green-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                  </svg>
+                  <span class="text-gray-700">{feature}</span>
+                </li>
+              ))}
+            </ul>
+            
+            <button 
+              class={`w-full py-3 px-6 rounded-lg font-semibold transition-colors ${
+                index === 1 
+                  ? 'bg-blue-500 text-white hover:bg-blue-600' 
+                  : 'bg-gray-900 text-white hover:bg-gray-800'
+              }`}
+              onclick={`selectPlan('${plan.title.toLowerCase()}')`}
+            >
+              {plan.action}
+            </button>
+          </div>
+        </div>
+      ))}
+    </div>
+    
+    <div class="text-center mt-12">
+      <p class="text-gray-600 mb-4">
+        Need help choosing? <a href="/contact" class="text-blue-500 hover:underline">Contact our team</a>
+      </p>
+      <p class="text-sm text-gray-500">
+        All plans include a 14-day free trial. Cancel anytime.
+      </p>
+    </div>
+  </main>
+
+  <script>
+    function selectPlan(planName) {
+      // This would typically:
+      // 1. Call your API to update the store's plan
+      // 2. Handle payment processing
+      // 3. Redirect back to admin dashboard
+      
+      console.log(`Selected plan: ${planName}`);
+      
+      // For demonstration, simulate plan selection
+      alert(`You selected the ${planName} plan. In a real app, this would process payment and update your store settings.`);
+      
+      // Simulate successful plan selection by redirecting back to admin
+      // In a real app, only do this after successful payment/plan activation
+      if (confirm('Simulate successful plan activation? (This would normally happen after payment)')) {
+        window.location.href = '/app/admin/dashboard';
+      }
+    }
+    
+    // Show a message if user was redirected here due to missing plan
+    document.addEventListener('DOMContentLoaded', () => {
+      const urlParams = new URLSearchParams(window.location.search);
+      const reason = urlParams.get('reason');
+      
+      if (reason === 'no-plan') {
+        const alertDiv = document.createElement('div');
+        alertDiv.className = 'bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded max-w-2xl mx-auto mb-6';
+        alertDiv.innerHTML = '🚫 <strong>Access Denied:</strong> You need an active plan to access admin features.';
+        
+        const main = document.querySelector('main');
+        const firstChild = main.firstElementChild;
+        main.insertBefore(alertDiv, firstChild.nextElementSibling);
+      }
+    });
+  </script>
+</body>
+</html>
