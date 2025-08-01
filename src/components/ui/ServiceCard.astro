@@ -32,10 +32,11 @@ const { index, titleTop, subtitle, img, alt, link } = Astro.props;
     </h3>
     <div class="flex justify-between">
       <div class="flex items-end">
-        <a href={link} class="flex items-center gap-3.5">
+        <Image src={index === 1 || index === 2 ? gob : wob} alt={alt} />
+        <!-- <a href={link} class="flex items-center gap-3.5">
           <Image src={index === 1 || index === 2 ? gob : wob} alt={alt} />
           <span class="hidden sm:block">Service Info</span>
-        </a>
+        </a> -->
       </div>
       <picture class="max-h-40">
         <Image src={img} alt={alt} class="h-full w-full" />
