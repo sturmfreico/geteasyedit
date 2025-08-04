@@ -52,9 +52,10 @@ export const config = {
   ],
   pricing: [
     {
-      title: "Starter",
+      title: "Basic",
       description: "0 - 500 store order volume",
       price: 19,
+      yearlyPrice: 199,
       features: [
         "0 - 500 monthly store order volume",
         "Unlimited order edits",
@@ -73,6 +74,7 @@ export const config = {
       title: "Grow",
       description: "500 - 1500 store order volume",
       price: 49,
+      yearlyPrice: 499,
       features: [
         "500 - 1500 monthly store order volume",
         "Unlimited order edits",
@@ -91,6 +93,7 @@ export const config = {
       title: "Advanced",
       description: "1500+ store order volume",
       price: 199,
+      yearlyPrice: 1999,
       features: [
         "1500+ monthly store order volume",
         "Everything in Grow",

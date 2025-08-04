@@ -11,7 +11,7 @@ import Section from "./Section.astro";
         Plans
       </h2>
       <p class="mb-5 font-light text-gray-500 sm:text-xl">
-        Choose the plan that's right for you
+        Choose the plan that's right for you. All charges are billed in USD.
       </p>
     </div>
     <div
@@ -25,9 +25,15 @@ import Section from "./Section.astro";
               <p class="font-light text-gray-500 sm:text-lg">
                 {item.description}
               </p>
-              <div class="my-8 flex items-baseline justify-center">
+              <div class="mt-8 flex items-baseline justify-center">
                 <span class="mr-2 text-5xl font-extrabold">${item.price}</span>
                 <span class="text-gray-500">/month</span>
+              </div>
+              <div class="mt-2 mb-8 flex items-baseline justify-center">
+                <span class="mr-1 text-xl text-green-600">
+                  or ${item.yearlyPrice}
+                </span>
+                <span class="text-green-600">/year</span>
               </div>
               <ul role="list" class="mb-8 min-h-60 space-y-4 text-left">
                 {item.features.map((feature) => (
