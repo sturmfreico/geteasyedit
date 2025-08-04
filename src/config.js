@@ -93,7 +93,7 @@ export const config = {
       title: "Advanced",
       description: "1500+ store order volume",
       price: 199,
-      yearlyPrice: 1999,
+      yearlyPrice: "1,999",
       features: [
         "1500+ monthly store order volume",
         "Everything in Grow",
