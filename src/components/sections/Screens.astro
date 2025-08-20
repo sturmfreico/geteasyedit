@@ -1,0 +1,15 @@
+---
+import { Image } from "astro:assets";
+import Card from "../ui/Card.astro";
+import Section from "./Section.astro";
+
+import propImg from "../../assets/screens/website-screen.webp";
+---
+
+<Section className="pt-28 pb-14">
+  <Card>
+    <div class="rounded-base relative flex overflow-hidden bg-gray-100">
+      <Image src={propImg} alt="This is an illustration" class="w-full" />
+    </div>
+  </Card>
+</Section>
