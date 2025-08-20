@@ -5,12 +5,12 @@ const { isUnderline, className } = Astro.props;
 {
   isUnderline ? (
     <div
-      class={`rounded-base border-dark border shadow-[0px_5px_0px_#191a23] ${className}`}
+      class={`rounded-base border-dark border shadow-[0px_5px_0px_#191a23] ${className ?? ""}`}
     >
       <slot />
     </div>
   ) : (
-    <div class={`rounded-base shadow-lg ${className}`}>
+    <div class={`rounded-base shadow-lg ${className ?? ""}`}>
       <slot />
     </div>
   )

@@ -6,9 +6,11 @@ import Section from "./Section.astro";
 import propImg from "../../assets/screens/website-screen.webp";
 ---
 
-<Section className="pt-28 pb-14">
+<Section className="pt-20 pb-0 lg:pt-28 lg:pb-20">
   <Card>
-    <div class="rounded-base relative flex overflow-hidden bg-gray-100">
+    <div
+      class="lg:rounded-base relative flex overflow-hidden rounded-2xl bg-gray-100"
+    >
       <Image src={propImg} alt="This is an illustration" class="w-full" />
     </div>
   </Card>
