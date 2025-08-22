@@ -1,36 +1,58 @@
-# Positivus - Digital Marketing Agency Landing Page
+# EasyEdit Website
 
-Introducing "Positivus" - a stunning and versatile Astro theme designed for digital marketing agencies.
+### This repository represents the website of the EasyEdit - Order Editing app.
 
-Built with clean, modern aesthetics and leveraging the power of Astro and Tailwind, Positivus empowers you to craft a captivating website that showcases your agency's expertise and fosters trust with potential clients.
+Let customers edit their own Shopify orders and **save 80% on support tickets**.
 
-[![Static Badge](https://img.shields.io/badge/UI%2FUX-Olga-blue)](https://www.figma.com/@olgaaverchenko) [![View Demo](https://img.shields.io/badge/Develop-Manul_Thanura-red)](https://lk.linkedin.com/in/manulthanura)
-[![Static Badge](https://img.shields.io/badge/View_Demo-green)](https://positivustheme.vercel.app)
-[![Static Badge](https://img.shields.io/badge/Astro-orange)](https://astro.build/)
+EasyEdit empowers customers to modify their own orders, reducing "can you change my order" requests while improving customer satisfaction. Built with modern web technologies for a seamless experience.
 
-![Cover](./public/cover.png)
+[![Astro](https://img.shields.io/badge/Astro-orange)](https://astro.build/)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind%20CSS-blue)](https://tailwindcss.com/)
+[![Shopify App](https://img.shields.io/badge/Shopify%20App-green)](https://apps.shopify.com/easyedit-order-editing)
 
-## Theme Features
+![EasyEdit Hero](./src/assets/screens/hero.webp)
 
-Leveraging the power of Astro and Tailwind CSS, Positivus offers:
+## Key Features
 
-- Clean and modern design.
-- SEO-friendly.
-- Multiple Layouts.
-- Seamless Navigation.
-- Pre-built Sections.
-- Customizable Components.
-- Mobile-Responsiveness.
+EasyEdit provides everything you need to streamline order management:
+
+- **Unlimited Order Edits** - Let customers modify their orders freely
+- **Analytics Dashboard** - Track editing patterns and customer behavior
+- **Easy Onboarding** - 2-minute setup that works with any theme
+- **Chat & Email Support** - Professional support when you need it
+- **No Hidden Fees** - Transparent pricing based on order volume
+- **Custom Edit Windows** - Set time limits for order modifications (Advanced plan)
+
+## 💰 Pricing Plans
+
+EasyEdit offers flexible pricing based on your store's monthly order volume:
+
+- **Basic Plan** - $19/month (0-500 orders) - Perfect for small stores
+- **Grow Plan** - $49/month (500-1,500 orders) - Ideal for growing businesses
+- **Advanced Plan** - $199/month (1,500+ orders) - Enterprise features included
+
+All plans include:
+
+✅ Unlimited order edits  
+✅ Analytics dashboard  
+✅ Easy onboarding  
+✅ Chat & email support  
+✅ No hidden fees  
+✅ 14-day free trial
 
 ## 🚀 Project Structure
 
-The project is built using Astro.js and Tailwind CSS. Here's a quick look at the project structure:
+This marketing website is built using Astro.js and Tailwind CSS:
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
-
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
-
-Any static assets, like images, can be placed in the `public/` directory.
+```
+src/
+├── components/
+│   ├── sections/     # Main page sections (Hero, Features, etc.)
+│   └── ui/          # Reusable UI components
+├── pages/           # Website pages
+├── assets/          # Images and static assets
+└── config.js        # App configuration and content
+```
 
 ## 🧞 Commands
 
@@ -45,10 +67,25 @@ All commands are run from the root of the project, from a terminal:
 | `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
 | `npm run astro -- --help` | Get help using the Astro CLI                     |
 
-## 👀 Want to learn more?
+## 📱 Get EasyEdit
 
-Feel free to check [Astro documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+Ready to reduce your support tickets and improve customer satisfaction?
+
+🔗 **[Install EasyEdit on Shopify App Store](https://apps.shopify.com/easyedit-order-editing)**
+
+- 14-day free trial
+- 2-minute setup
+- Works with any Shopify theme
+- No technical knowledge required
+
+## 🛠️ Development
+
+This website is built with:
+
+- [Astro](https://astro.build) - Static site generator
+- [Tailwind CSS](https://tailwindcss.com) - Utility-first CSS framework
+- TypeScript for type safety
 
 ## 📄 License
 
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details
