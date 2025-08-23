@@ -1,10 +1,10 @@
 export const config = {
   title: "EasyEdit",
   description:
-    "EasyEdit empowers customers to edit their own orders. Reduce support requests and improve customer satisfaction.",
+    "Self serve order editing! Empower your customers with complete control over their orders.",
   image: {
-    src: "TODO: UPDATE_THIS_IMG_URL",
-    alt: "EasyEdit",
+    src: "https://geteasyedit.com/images/hero-small.webp",
+    alt: "EasyEdit - Order Editing",
   },
   clients: [
     {
