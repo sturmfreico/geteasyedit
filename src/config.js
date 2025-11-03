@@ -67,7 +67,7 @@ export const config = {
       devCount: "1 developer",
       support: "6 months",
       update: "6 months",
-      action: "Start 14 day free trial",
+      action: "Start 30 day free trial",
       link: "/",
     },
     {
@@ -86,7 +86,7 @@ export const config = {
       devCount: "10 developers",
       support: "24 months",
       update: "24 months",
-      action: "Start 14 day free trial",
+      action: "Start 30 day free trial",
       link: "/",
     },
     {
@@ -104,7 +104,7 @@ export const config = {
       devCount: "100+ developers",
       support: "36 months",
       update: "36 months",
-      action: "Start 14 day free trial",
+      action: "Start 30 day free trial",
       link: "/",
     },
   ],

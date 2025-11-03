@@ -38,7 +38,7 @@ All plans include:
 ✅ Easy onboarding  
 ✅ Chat & email support  
 ✅ No hidden fees  
-✅ 14-day free trial
+✅ 30-day free trial
 
 ## 🚀 Project Structure
 
@@ -73,7 +73,7 @@ Ready to reduce your support tickets and improve customer satisfaction?
 
 🔗 **[Install EasyEdit on Shopify App Store](https://apps.shopify.com/easyedit-order-editing)**
 
-- 14-day free trial
+- 30-day free trial
 - 2-minute setup
 - Works with any Shopify theme
 - No technical knowledge required
