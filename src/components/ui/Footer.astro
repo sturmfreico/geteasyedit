@@ -6,11 +6,16 @@ import Linkedin from "../../assets/linkedin.svg";
 import Logo from "../../assets/logo-dark.svg";
 import Twitter from "../../assets/twitter.svg";
 import ShortForm from "../ui/ShortForm.astro";
+import InstagramLogo from "../../assets/instagram.svg";
 
 const logos = [
-  { name: "Facebook", src: Facebook, link: "https://facebook.com" },
-  { name: "Linkedin", src: Linkedin, link: "https://linkedin.com" },
-  { name: "Twitter", src: Twitter, link: "https://twitter.com" },
+  {
+    name: "Instagram",
+    src: InstagramLogo,
+    link: "https://www.instagram.com/geteasyedit",
+  },
+  // { name: "Linkedin", src: Linkedin, link: "https://linkedin.com" },
+  // { name: "Twitter", src: Twitter, link: "https://twitter.com" },
 ];
 
 const links = [
@@ -52,7 +57,12 @@ const links = [
                   <li>
                     <a href={logo.link} target="_blank">
                       <picture>
-                        <Image src={logo.src} alt={logo.name} />
+                        <Image
+                          src={logo.src}
+                          alt={logo.name}
+                          width={30}
+                          height={30}
+                        />
                       </picture>
                     </a>
                   </li>
