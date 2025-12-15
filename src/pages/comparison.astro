@@ -1,0 +1,262 @@
+---
+import MainLayout from "@/layouts/MainLayout.astro";
+import Section from "@/components/sections/Section.astro";
+
+const features = [
+  {
+    category: "Pricing & Plans",
+    items: [
+      {
+        feature: "Starting Price",
+        easyedit: "$19/month",
+        orderediting: "$29/month",
+        cleverific: "$39/month",
+        highlight: true,
+      },
+      {
+        feature: "Small Business Plan",
+        easyedit: "Yes (0-500 orders)",
+        orderediting: "Limited",
+        cleverific: "No dedicated plan",
+        highlight: true,
+      },
+      {
+        feature: "Free Trial",
+        easyedit: "30 days",
+        orderediting: "7 days",
+        cleverific: "14 days",
+        highlight: false,
+      },
+      {
+        feature: "Hidden Fees",
+        easyedit: "None",
+        orderediting: "Transaction fees",
+        cleverific: "Variable",
+        highlight: true,
+      },
+    ],
+  },
+  {
+    category: "Onboarding & Support",
+    items: [
+      {
+        feature: "Setup Time",
+        easyedit: "< 5 minutes",
+        orderediting: "15-30 minutes",
+        cleverific: "30+ minutes",
+        highlight: true,
+      },
+      {
+        feature: "Easy Onboarding",
+        easyedit: "Guided setup",
+        orderediting: "Manual setup",
+        cleverific: "Manual setup",
+        highlight: true,
+      },
+      {
+        feature: "Email Support",
+        easyedit: "Yes",
+        orderediting: "Yes",
+        cleverific: "Yes",
+        highlight: false,
+      },
+      {
+        feature: "Chat Support",
+        easyedit: "Yes",
+        orderediting: "Premium only",
+        cleverific: "Premium only",
+        highlight: false,
+      },
+    ],
+  },
+  {
+    category: "Core Features",
+    items: [
+      {
+        feature: "Order Edits",
+        easyedit: "Unlimited",
+        orderediting: "Unlimited",
+        cleverific: "Unlimited",
+        highlight: false,
+      },
+      {
+        feature: "Analytics Dashboard",
+        easyedit: "Yes",
+        orderediting: "Yes",
+        cleverific: "Yes",
+        highlight: false,
+      },
+      {
+        feature: "Custom Edit Window",
+        easyedit: "Advanced plan",
+        orderediting: "All plans",
+        cleverific: "All plans",
+        highlight: false,
+      },
+      {
+        feature: "Advanced Workflows",
+        easyedit: "Basic",
+        orderediting: "Advanced",
+        cleverific: "Advanced",
+        highlight: false,
+      },
+      {
+        feature: "API Access",
+        easyedit: "Coming soon",
+        orderediting: "Yes",
+        cleverific: "Yes",
+        highlight: false,
+      },
+    ],
+  },
+];
+---
+
+<MainLayout
+  title="EasyEdit vs Competitors | Compare Order Editing Apps"
+  description="See how EasyEdit compares to Order Editing and Cleverific. Simple pricing, easy setup, perfect for small businesses."
+>
+  <Section id="comparison" className="pt-14 pb-20">
+    <div class="mx-auto w-full max-w-7xl px-4">
+      <!-- Header -->
+      <div class="mb-12 text-center">
+        <h1 class="mb-4 text-4xl font-bold tracking-tight md:text-5xl">
+          Why Choose <span class="text-primary-darker">EasyEdit</span>?
+        </h1>
+        <p class="mx-auto max-w-3xl text-xl text-gray-600">
+          We're built for small businesses who need powerful order editing
+          without the complexity. Compare us with the alternatives and see why
+          we're the better choice for growing stores.
+        </p>
+      </div>
+
+      <!-- Quick Highlights -->
+      <div class="mb-16 grid gap-6 md:grid-cols-3">
+        <div class="bg-primary rounded-2xl p-8 text-center shadow-lg">
+          <div class="text-dark mb-3 text-4xl font-bold">47%</div>
+          <div class="text-dark text-lg font-medium">Lower Starting Price</div>
+          <div class="mt-2 text-sm text-gray-700">
+            than competitors' entry plans
+          </div>
+        </div>
+        <div class="bg-primary rounded-2xl p-8 text-center shadow-lg">
+          <div class="text-dark mb-3 text-4xl font-bold">&lt; 5 min</div>
+          <div class="text-dark text-lg font-medium">Setup Time</div>
+          <div class="mt-2 text-sm text-gray-700">
+            Get started in minutes, not hours
+          </div>
+        </div>
+        <div class="bg-primary rounded-2xl p-8 text-center shadow-lg">
+          <div class="text-dark mb-3 text-4xl font-bold">0</div>
+          <div class="text-dark text-lg font-medium">Hidden Fees</div>
+          <div class="mt-2 text-sm text-gray-700">
+            What you see is what you pay
+          </div>
+        </div>
+      </div>
+
+      <!-- Comparison Tables -->
+      {
+        features.map((section) => (
+          <div class="mb-12">
+            <h2 class="text-dark mb-6 text-2xl font-bold">
+              {section.category}
+            </h2>
+            <div class="overflow-x-auto rounded-2xl border border-gray-200 bg-white shadow-sm">
+              <table class="w-full">
+                <thead class="bg-gray">
+                  <tr>
+                    <th class="text-dark p-4 text-left text-sm font-semibold md:w-1/4">
+                      Feature
+                    </th>
+                    <th class="bg-primary text-dark p-4 text-center text-sm font-bold md:w-1/4">
+                      <div class="flex items-center justify-center gap-2">
+                        <span>EasyEdit</span>
+                      </div>
+                    </th>
+                    <th class="p-4 text-center text-sm font-semibold text-gray-700 md:w-1/4">
+                      Order Editing
+                    </th>
+                    <th class="p-4 text-center text-sm font-semibold text-gray-700 md:w-1/4">
+                      Cleverific
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {section.items.map((item, itemIdx) => (
+                    <tr
+                      class:list={[
+                        itemIdx % 2 === 0 ? "bg-white" : "bg-gray/30",
+                        item.highlight && "border-primary border-l-4",
+                      ]}
+                    >
+                      <td class="text-dark p-4 text-sm font-medium">
+                        {item.feature}
+                      </td>
+                      <td class="text-dark p-4 text-center text-sm font-semibold">
+                        {item.easyedit}
+                      </td>
+                      <td class="p-4 text-center text-sm text-gray-700">
+                        {item.orderediting}
+                      </td>
+                      <td class="p-4 text-center text-sm text-gray-700">
+                        {item.cleverific}
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          </div>
+        ))
+      }
+
+      <!-- Honest Assessment -->
+      <div class="bg-gray mt-16 rounded-2xl p-8 md:p-12">
+        <h2 class="text-dark mb-6 text-2xl font-bold">Our Honest Take</h2>
+        <div class="space-y-4 text-lg text-gray-700">
+          <p>
+            <strong class="text-dark">What we do best:</strong> We've optimized for
+            small to medium-sized businesses. You'll be up and running in under 5
+            minutes with our guided onboarding, and you'll never worry about surprise
+            fees or complex pricing tiers.
+          </p>
+          <p>
+            <strong class="text-dark">Where others excel:</strong> If you need advanced
+            API integrations, complex workflow automation, or enterprise-level features,
+            our competitors may offer more. We've intentionally kept our feature
+            set focused on what 90% of stores actually need.
+          </p>
+          <p>
+            <strong class="text-dark">Bottom line:</strong> Choose EasyEdit if you
+            want a reliable, affordable solution that just works. Choose competitors
+            if you need every possible feature and have the time and budget for a
+            more complex setup.
+          </p>
+        </div>
+      </div>
+
+      <!-- CTA -->
+      <div class="mt-16 text-center">
+        <h2 class="text-dark mb-6 text-3xl font-bold">
+          Ready to try the easier way?
+        </h2>
+        <p class="mb-8 text-lg text-gray-600">
+          Join other stores that chose simplicity without sacrificing power.
+        </p>
+        <div class="flex flex-col gap-4 sm:flex-row sm:justify-center">
+          <a
+            href="https://apps.shopify.com/easyedit-order-editing"
+            target="_blank"
+            class="btn-primary inline-block"
+          >
+            Start 30-Day Free Trial
+          </a>
+        </div>
+        <p class="mt-4 text-sm text-gray-500">
+          No credit card required • Setup in 2 minutes
+        </p>
+      </div>
+    </div>
+  </Section>
+</MainLayout>
