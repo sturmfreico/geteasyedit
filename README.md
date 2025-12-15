@@ -1,8 +1,8 @@
-# EasyEdit Website
+# EasyEdit
 
-### This repository represents the website of the EasyEdit - Order Editing app.
+### Website of the EasyEdit - Order Editing Shopify app
 
-Let customers edit their own Shopify orders and **save 80% on support tickets**.
+Let customers edit their own Shopify orders and **save 80% on support tickets** with the easiest order editing app on the market.
 
 EasyEdit empowers customers to modify their own orders, reducing "can you change my order" requests while improving customer satisfaction. Built with modern web technologies for a seamless experience.
 
