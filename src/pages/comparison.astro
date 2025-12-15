@@ -121,7 +121,7 @@ const features = [
       <!-- Header -->
       <div class="mb-12 text-center">
         <h1 class="mb-4 text-4xl font-bold tracking-tight md:text-5xl">
-          Why Choose <span class="greenhead">EasyEdit</span>?
+          Why Choose <span class="text-primary-darker">EasyEdit</span>?
         </h1>
         <p class="mx-auto max-w-3xl text-xl text-gray-600">
           We're built for small businesses who need powerful order editing
@@ -131,26 +131,24 @@ const features = [
       </div>
 
       <!-- Quick Highlights -->
-      <div
-        class="mb-16 grid gap-6 md:grid-cols-3"
-      >
-        <div class="bg-primary rounded-2xl p-8 text-center">
-          <div class="mb-3 text-4xl font-bold text-dark">47%</div>
-          <div class="text-lg font-medium text-dark">Lower Starting Price</div>
+      <div class="mb-16 grid gap-6 md:grid-cols-3">
+        <div class="bg-primary rounded-2xl p-8 text-center shadow-lg">
+          <div class="text-dark mb-3 text-4xl font-bold">47%</div>
+          <div class="text-dark text-lg font-medium">Lower Starting Price</div>
           <div class="mt-2 text-sm text-gray-700">
             than competitors' entry plans
           </div>
         </div>
-        <div class="bg-primary rounded-2xl p-8 text-center">
-          <div class="mb-3 text-4xl font-bold text-dark">&lt; 5 min</div>
-          <div class="text-lg font-medium text-dark">Setup Time</div>
+        <div class="bg-primary rounded-2xl p-8 text-center shadow-lg">
+          <div class="text-dark mb-3 text-4xl font-bold">&lt; 5 min</div>
+          <div class="text-dark text-lg font-medium">Setup Time</div>
           <div class="mt-2 text-sm text-gray-700">
             Get started in minutes, not hours
           </div>
         </div>
-        <div class="bg-primary rounded-2xl p-8 text-center">
-          <div class="mb-3 text-4xl font-bold text-dark">0</div>
-          <div class="text-lg font-medium text-dark">Hidden Fees</div>
+        <div class="bg-primary rounded-2xl p-8 text-center shadow-lg">
+          <div class="text-dark mb-3 text-4xl font-bold">0</div>
+          <div class="text-dark text-lg font-medium">Hidden Fees</div>
           <div class="mt-2 text-sm text-gray-700">
             What you see is what you pay
           </div>
@@ -161,20 +159,19 @@ const features = [
       {
         features.map((section) => (
           <div class="mb-12">
-            <h2 class="mb-6 text-2xl font-bold text-dark">{section.category}</h2>
+            <h2 class="text-dark mb-6 text-2xl font-bold">
+              {section.category}
+            </h2>
             <div class="overflow-x-auto rounded-2xl border border-gray-200 bg-white shadow-sm">
               <table class="w-full">
                 <thead class="bg-gray">
                   <tr>
-                    <th class="p-4 text-left text-sm font-semibold text-dark md:w-1/4">
+                    <th class="text-dark p-4 text-left text-sm font-semibold md:w-1/4">
                       Feature
                     </th>
-                    <th class="bg-primary p-4 text-center text-sm font-bold text-dark md:w-1/4">
+                    <th class="bg-primary text-dark p-4 text-center text-sm font-bold md:w-1/4">
                       <div class="flex items-center justify-center gap-2">
                         <span>EasyEdit</span>
-                        <span class="rounded-full bg-dark px-2 py-1 text-xs text-white">
-                          US
-                        </span>
                       </div>
                     </th>
                     <th class="p-4 text-center text-sm font-semibold text-gray-700 md:w-1/4">
@@ -190,13 +187,13 @@ const features = [
                     <tr
                       class:list={[
                         itemIdx % 2 === 0 ? "bg-white" : "bg-gray/30",
-                        item.highlight && "border-l-4 border-primary",
+                        item.highlight && "border-primary border-l-4",
                       ]}
                     >
-                      <td class="p-4 text-sm font-medium text-dark">
+                      <td class="text-dark p-4 text-sm font-medium">
                         {item.feature}
                       </td>
-                      <td class="p-4 text-center text-sm font-semibold text-dark">
+                      <td class="text-dark p-4 text-center text-sm font-semibold">
                         {item.easyedit}
                       </td>
                       <td class="p-4 text-center text-sm text-gray-700">
@@ -216,38 +213,36 @@ const features = [
 
       <!-- Honest Assessment -->
       <div class="bg-gray mt-16 rounded-2xl p-8 md:p-12">
-        <h2 class="mb-6 text-2xl font-bold text-dark">
-          Our Honest Take
-        </h2>
+        <h2 class="text-dark mb-6 text-2xl font-bold">Our Honest Take</h2>
         <div class="space-y-4 text-lg text-gray-700">
           <p>
-            <strong class="text-dark">What we do best:</strong> We've optimized
-            for small to medium-sized businesses. You'll be up and running in under
-            5 minutes with our guided onboarding, and you'll never worry about surprise
+            <strong class="text-dark">What we do best:</strong> We've optimized for
+            small to medium-sized businesses. You'll be up and running in under 5
+            minutes with our guided onboarding, and you'll never worry about surprise
             fees or complex pricing tiers.
           </p>
           <p>
-            <strong class="text-dark">Where others excel:</strong> If you need
-            advanced API integrations, complex workflow automation, or enterprise-level
-            features, our competitors may offer more. We've intentionally kept
-            our feature set focused on what 90% of stores actually need.
+            <strong class="text-dark">Where others excel:</strong> If you need advanced
+            API integrations, complex workflow automation, or enterprise-level features,
+            our competitors may offer more. We've intentionally kept our feature
+            set focused on what 90% of stores actually need.
           </p>
           <p>
-            <strong class="text-dark">Bottom line:</strong> Choose EasyEdit if
-            you want a reliable, affordable solution that just works. Choose competitors
-            if you need every possible feature and have the time and budget for
-            a more complex setup.
+            <strong class="text-dark">Bottom line:</strong> Choose EasyEdit if you
+            want a reliable, affordable solution that just works. Choose competitors
+            if you need every possible feature and have the time and budget for a
+            more complex setup.
           </p>
         </div>
       </div>
 
       <!-- CTA -->
       <div class="mt-16 text-center">
-        <h2 class="mb-6 text-3xl font-bold text-dark">
+        <h2 class="text-dark mb-6 text-3xl font-bold">
           Ready to try the easier way?
         </h2>
         <p class="mb-8 text-lg text-gray-600">
-          Join hundreds of stores that chose simplicity without sacrificing power.
+          Join other stores that chose simplicity without sacrificing power.
         </p>
         <div class="flex flex-col gap-4 sm:flex-row sm:justify-center">
           <a
@@ -257,12 +252,9 @@ const features = [
           >
             Start 30-Day Free Trial
           </a>
-          <a href="/#features" class="btn-secondary inline-block">
-            See All Features
-          </a>
         </div>
         <p class="mt-4 text-sm text-gray-500">
-          No credit card required • Setup in under 5 minutes
+          No credit card required • Setup in 2 minutes
         </p>
       </div>
     </div>
