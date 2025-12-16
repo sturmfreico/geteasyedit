@@ -1,18 +1,15 @@
 ---
-import { Image } from "astro:assets";
 import Section from "./Section.astro";
-
-import HeroIlust from "../../assets/pics/hero.svg";
 ---
 
 <Section id="home" className="pt-10">
   <div
-    class="relative flex flex-col-reverse items-center md:flex-row"
+    class="relative flex flex-col items-center"
     id="hero"
   >
-    <div class="row items-center md:w-6/12">
-      <div class="space-y-8 text-left">
-        <div class="mb-4 flex justify-center md:justify-start">
+    <div class="row items-center">
+      <div class="space-y-8">
+        <div class="mb-4 flex justify-center">
           <span
             class="text-secondary bg-tag-green inline-flex items-center rounded-full px-3 py-1 text-sm font-medium"
           >
@@ -20,7 +17,7 @@ import HeroIlust from "../../assets/pics/hero.svg";
           </span>
         </div>
         <h1
-          class="text-center text-4xl leading-none font-bold text-gray-900 md:text-left md:text-6xl"
+          class="my-8 text-center text-4xl leading-none font-bold text-gray-900 md:text-7xl"
         >
           Stop drowning in <br />
           <span class="text-primary-darker">change my order</span>
@@ -28,16 +25,16 @@ import HeroIlust from "../../assets/pics/hero.svg";
           requests
         </h1>
         <p
-          class="mt-6 mb-8 text-center text-lg leading-relaxed font-normal text-gray-600 sm:mb-12 md:pr-12 md:text-left"
+          class="mt-6 mb-8 text-center text-lg leading-relaxed font-normal text-gray-600 sm:mb-12"
         >
           Let your customers edit their own Shopify orders and save your team
           hours of support.
         </p>
         <div
-          class="space-y-4 md:flex md:items-center md:space-y-0 md:space-x-4"
+          class="space-y-4 md:flex md:items-center md:justify-center md:space-y-0 md:space-x-4"
         >
           <div
-            class="inline-flex w-full items-center justify-center md:w-auto md:justify-start"
+            class="inline-flex w-full items-center justify-center md:w-auto"
           >
             <a
               href="https://apps.shopify.com/easyedit-order-editing"
@@ -47,9 +44,9 @@ import HeroIlust from "../../assets/pics/hero.svg";
               Start Free Trial
             </a>
           </div>
-          <div class="text-center md:text-left">
+          <div class="text-center">
             <p
-              class="flex justify-center gap-2 text-sm text-gray-500 md:justify-start"
+              class="flex justify-center gap-2 text-sm text-gray-500"
             >
               <span class="font-semibold text-green-600">
                 Free 30-day trial
@@ -60,7 +57,7 @@ import HeroIlust from "../../assets/pics/hero.svg";
           </div>
         </div>
         <div
-          class="flex items-center justify-center space-x-6 pt-4 text-sm text-gray-500 md:justify-start"
+          class="flex items-center justify-center space-x-6 pt-4 text-sm text-gray-500"
         >
           <div class="flex items-center space-x-2">
             <svg
@@ -103,15 +100,6 @@ import HeroIlust from "../../assets/pics/hero.svg";
           </div> -->
         </div>
       </div>
-    </div>
-    <div
-      class="mb-8 flex max-w-2xs items-center md:mb-0 md:w-6/12 md:max-w-max md:justify-end"
-    >
-      <Image
-        src={HeroIlust}
-        alt="Shopify Order Editing App Dashboard"
-        loading="eager"
-      />
     </div>
   </div>
 </Section>
