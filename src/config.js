@@ -99,7 +99,7 @@ export const config = {
         "Everything in Grow",
         "+ Personalized onboarding",
         "+ Priority Slack support ",
-        "+ Support with custom integrations time frames",
+        "+ Support with custom integrations",
       ],
       devCount: "100+ developers",
       support: "36 months",
