@@ -21,7 +21,7 @@ EasyEdit provides everything you need to streamline order management:
 - **Easy Onboarding** - 2-minute setup that works with any theme
 - **Chat & Email Support** - Professional support when you need it
 - **No Hidden Fees** - Transparent pricing based on order volume
-- **Custom Edit Windows** - Set time limits for order modifications (Advanced plan)
+- **Support with Custom Integrations** - Set time limits for order modifications (Advanced plan)
 
 ## 💰 Pricing Plans
 
