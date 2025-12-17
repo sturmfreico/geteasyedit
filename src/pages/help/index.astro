@@ -1,0 +1,103 @@
+---
+import MainLayout from "../../layouts/MainLayout.astro";
+
+const helpArticles = [
+  {
+    title: "Create a Shopify FAQ for Order Editing",
+    description: "Learn how to set up a FAQ page for your Shopify store to help customers understand how to edit their orders after placing them.",
+    href: "/help/shopify-faq-order-editing",
+    icon: "article",
+    category: "Getting Started",
+  },
+  // Future articles can be added here
+];
+---
+
+<MainLayout title="Help Center - EasyEdit">
+  <main class="space-y-20">
+    <div class="mx-auto max-w-7xl px-4 py-8 lg:px-3 lg:py-16">
+      <!-- Header Section -->
+      <div class="mb-12 text-center">
+        <h1 class="mb-4 text-5xl font-bold leading-none md:text-6xl">
+          Help Center
+        </h1>
+        <p class="mx-auto max-w-2xl text-xl text-gray-600">
+          Find guides, tutorials, and resources to help you get the most out of
+          EasyEdit
+        </p>
+      </div>
+
+      <!-- Search Section (for future enhancement) -->
+      <!-- <div class="mx-auto mb-16 max-w-2xl">
+        <div class="relative">
+          <input
+            type="text"
+            placeholder="Search help articles..."
+            class="w-full rounded-xl border border-gray-300 px-6 py-4 text-lg shadow-sm focus:border-[#6d28d9] focus:outline-none focus:ring-2 focus:ring-[#6d28d9]/20"
+          />
+        </div>
+      </div> -->
+
+      <!-- Help Articles Grid -->
+      <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+        {
+          helpArticles.map((article) => (
+            <a
+              href={article.href}
+              class="group rounded-xl border border-gray-200 bg-white p-6 shadow-sm transition duration-200 hover:scale-105 hover:shadow-xl"
+            >
+              <div class="mb-4 flex items-start justify-between">
+                <div class="rounded-lg bg-[#6d28d9]/10 p-3">
+                  <div class="h-6 w-6 text-[#6d28d9]">
+                    {article.icon === "article" ? (
+                      <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M2 5a2 2 0 012-2h8a2 2 0 012 2v10a2 2 0 002 2H4a2 2 0 01-2-2V5zm3 1h6v4H5V6zm6 6H5v2h6v-2z" clip-rule="evenodd"></path><path d="M15 7h1a2 2 0 012 2v5.5a1.5 1.5 0 01-3 0V7z"></path></svg>
+                    ) : (
+                      <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M2 6a2 2 0 012-2h6a2 2 0 012 2v8a2 2 0 01-2 2H4a2 2 0 01-2-2V6zM14.553 7.106A1 1 0 0014 8v4a1 1 0 00.553.894l2 1A1 1 0 0018 13V7a1 1 0 00-1.447-.894l-2 1z"></path></svg>
+                    )}
+                  </div>
+                </div>
+                <span class="rounded-full bg-gray-100 px-3 py-1 text-xs font-medium text-gray-600">
+                  {article.category}
+                </span>
+              </div>
+              <h3 class="mb-2 text-xl font-semibold group-hover:text-[#6d28d9]">
+                {article.title}
+              </h3>
+              <p class="text-gray-600">{article.description}</p>
+              <div class="mt-4 flex items-center text-sm font-medium text-[#6d28d9]">
+                Read more
+                <svg
+                  class="ml-1 h-4 w-4 transition-transform group-hover:translate-x-1"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M9 5l7 7-7 7"
+                  />
+                </svg>
+              </div>
+            </a>
+          ))
+        }
+      </div>
+
+      <!-- Additional Help Section -->
+      <div class="mt-20 rounded-xl bg-gray-50 p-8 text-center">
+        <h2 class="mb-4 text-2xl font-semibold">Still need help?</h2>
+        <p class="mb-6 text-gray-600">
+          Can't find what you're looking for? Our support team is here to help.
+        </p>
+        <a
+          href="mailto:support@geteasyedit.com"
+          class="inline-flex rounded-xl bg-[#6d28d9] px-8 py-4 text-lg font-normal text-white shadow-lg duration-200 hover:scale-105 hover:bg-[#5a1fb8] hover:shadow-xl"
+        >
+          Contact Support
+        </a>
+      </div>
+    </div>
+  </main>
+</MainLayout>
