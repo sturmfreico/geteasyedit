@@ -3,10 +3,7 @@ import Section from "./Section.astro";
 ---
 
 <Section id="home" className="pt-10">
-  <div
-    class="relative flex flex-col items-center"
-    id="hero"
-  >
+  <div class="relative flex flex-col items-center" id="hero">
     <div class="row items-center">
       <div class="space-y-8">
         <div class="mb-4 flex justify-center">
@@ -16,38 +13,35 @@ import Section from "./Section.astro";
             ⚡ Save 90% on support tickets
           </span>
         </div>
-        <h1
-          class="my-8 text-center text-4xl leading-none font-bold text-gray-900 md:text-7xl"
-        >
-          Stop drowning in <br />
-          <span class="text-primary-darker">change my order</span>
-          <br />
-          requests
-        </h1>
-        <p
-          class="mt-6 mb-8 text-center text-lg leading-relaxed font-normal text-gray-600 sm:mb-12"
-        >
-          Let your customers edit their own Shopify orders and save your team
-          hours of support.
-        </p>
-        <div
-          class="space-y-4 md:flex md:items-center md:justify-center md:space-y-0 md:space-x-4"
-        >
-          <div
-            class="inline-flex w-full items-center justify-center md:w-auto"
+        <div class="my-16 flex justify-center md:max-w-[700px]">
+          <h1
+            class="text-center text-5xl leading-none font-bold text-gray-900 md:text-7xl"
           >
+            Stop drowning in
+            <span class="text-primary-darker">change my order</span>
+            requests
+          </h1>
+        </div>
+        <div class="mt-6 flex justify-center">
+          <p
+            class="text-md max-w-[420px] text-center leading-relaxed font-normal text-gray-600 md:text-lg"
+          >
+            Let your customers edit their own Shopify orders and save your team
+            hours of support.
+          </p>
+        </div>
+        <div class="space-y-4">
+          <div class="inline-flex w-full items-center justify-center">
             <a
               href="https://apps.shopify.com/easyedit-order-editing"
               target="_blank"
-              class="text-secondary bg-primary hover:bg-primary-darker rounded-xl px-8 py-5 text-center text-xl leading-7 font-normal shadow-lg duration-200 hover:scale-105 hover:shadow-xl"
+              class="text-secondary bg-primary hover:bg-primary-darker rounded-xl px-16 py-5 text-center text-xl leading-7 font-normal shadow-lg duration-200 hover:scale-105 hover:shadow-xl"
             >
               Start Free Trial
             </a>
           </div>
           <div class="text-center">
-            <p
-              class="flex justify-center gap-2 text-sm text-gray-500"
-            >
+            <p class="flex justify-center gap-2 text-sm text-gray-500">
               <span class="font-semibold text-green-600">
                 Free 30-day trial
               </span>
@@ -56,7 +50,7 @@ import Section from "./Section.astro";
             </p>
           </div>
         </div>
-        <div
+        <!-- <div
           class="flex items-center justify-center space-x-6 pt-4 text-sm text-gray-500"
         >
           <div class="flex items-center space-x-2">
@@ -85,20 +79,7 @@ import Section from "./Section.astro";
             </svg>
             <span>Works with any theme</span>
           </div>
-          <!-- <div class="flex items-center space-x-2">
-            <svg
-              class="h-5 w-5 text-green-500"
-              fill="currentColor"
-              viewBox="0 0 20 20"
-            >
-              <path
-                fill-rule="evenodd"
-                d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                clip-rule="evenodd"></path>
-            </svg>
-            <span>No revenue share</span>
-          </div> -->
-        </div>
+        </div> -->
       </div>
     </div>
   </div>
