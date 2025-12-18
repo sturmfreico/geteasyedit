@@ -6,14 +6,13 @@ import MainLayout from "../../layouts/MainLayout.astro";
   title="Create a Shopify FAQ page for EasyEdit"
   description="Step-by-step guide to creating a FAQ page on your Shopify store to help customers understand how to edit their orders after purchase."
 >
-  <main class="space-y-20">
-    <div class="mx-auto max-w-4xl px-4 py-8 lg:px-3 lg:py-16">
+  <main class="space-y-20 px-5">
+    <div class="mx-auto max-w-4xl py-8 lg:py-16">
       <!-- Breadcrumb -->
       <nav class="mb-8 flex items-center space-x-2 text-sm text-gray-600">
         <a href="/help" class="hover:text-[#6d28d9]">Help Center</a>
         <span>/</span>
-        <span class="text-gray-900">Create a Shopify FAQ page</span
-        >
+        <span class="text-gray-900">Create a Shopify FAQ page</span>
       </nav>
 
       <!-- Article Header -->
@@ -259,25 +258,42 @@ import MainLayout from "../../layouts/MainLayout.astro";
           </li>
         </ul>
 
-        <h2 class="mt-8 mb-4 text-2xl font-semibold">Ready-to-Use Markdown Template</h2>
+        <h2 class="mt-8 mb-4 text-2xl font-semibold">
+          Ready-to-Use Markdown Template
+        </h2>
         <p>
-          Copy the markdown template below and paste it directly into your Shopify page editor. Remember to customize the timeframes and policies to match your store's specific requirements.
+          Copy the markdown template below and paste it directly into your
+          Shopify page editor. Remember to customize the timeframes and policies
+          to match your store's specific requirements.
         </p>
 
         <div class="my-8 rounded-xl border border-gray-200 bg-gray-50 p-6">
           <div class="mb-4 flex items-center justify-between">
-            <span class="text-sm font-semibold text-gray-700">Markdown Template</span>
+            <span class="text-sm font-semibold text-gray-700"
+              >Markdown Template</span
+            >
             <button
               id="copyButton"
-              class="inline-flex items-center gap-2 rounded-lg bg-[#6d28d9] px-4 py-2 text-sm font-medium text-white transition-all hover:bg-[#5a1fb8] focus:outline-none focus:ring-2 focus:ring-[#6d28d9] focus:ring-offset-2"
+              class="inline-flex items-center gap-2 rounded-lg bg-[#6d28d9] px-4 py-2 text-sm font-medium text-white transition-all hover:bg-[#5a1fb8] focus:ring-2 focus:ring-[#6d28d9] focus:ring-offset-2 focus:outline-none"
             >
-              <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path>
+              <svg
+                class="h-4 w-4"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"
+                ></path>
               </svg>
               <span id="copyButtonText">Copy</span>
             </button>
           </div>
-          <pre class="overflow-x-auto rounded-lg bg-gray-900 p-4"><code class="text-sm text-gray-100" id="markdownTemplate"># Order Editing FAQ
+          <pre
+            class="overflow-x-auto rounded-lg bg-gray-900 p-4"><code class="text-sm text-gray-100" id="markdownTemplate"># Order Editing FAQ
 
 Welcome! You can edit your order right after placing it. Below are answers to common questions about our order editing process.
 
@@ -316,42 +332,48 @@ Once your order has shipped, you can no longer edit it through the order editor.
         </div>
 
         <script>
-          document.getElementById('copyButton')?.addEventListener('click', async () => {
-            const template = document.getElementById('markdownTemplate')?.textContent || '';
-            const button = document.getElementById('copyButton');
-            const buttonText = document.getElementById('copyButtonText');
-            
-            try {
-              await navigator.clipboard.writeText(template);
-              if (buttonText) {
-                buttonText.textContent = 'Copied!';
-              }
-              if (button) {
-                button.classList.add('bg-green-600', 'hover:bg-green-700');
-                button.classList.remove('bg-[#6d28d9]', 'hover:bg-[#5a1fb8]');
-              }
-              
-              setTimeout(() => {
+          document
+            .getElementById("copyButton")
+            ?.addEventListener("click", async () => {
+              const template =
+                document.getElementById("markdownTemplate")?.textContent || "";
+              const button = document.getElementById("copyButton");
+              const buttonText = document.getElementById("copyButtonText");
+
+              try {
+                await navigator.clipboard.writeText(template);
                 if (buttonText) {
-                  buttonText.textContent = 'Copy to Clipboard';
+                  buttonText.textContent = "Copied!";
                 }
                 if (button) {
-                  button.classList.remove('bg-green-600', 'hover:bg-green-700');
-                  button.classList.add('bg-[#6d28d9]', 'hover:bg-[#5a1fb8]');
+                  button.classList.add("bg-green-600", "hover:bg-green-700");
+                  button.classList.remove("bg-[#6d28d9]", "hover:bg-[#5a1fb8]");
                 }
-              }, 2000);
-            } catch (err) {
-              console.error('Failed to copy text: ', err);
-              if (buttonText) {
-                buttonText.textContent = 'Failed to copy';
-              }
-              setTimeout(() => {
+
+                setTimeout(() => {
+                  if (buttonText) {
+                    buttonText.textContent = "Copy";
+                  }
+                  if (button) {
+                    button.classList.remove(
+                      "bg-green-600",
+                      "hover:bg-green-700",
+                    );
+                    button.classList.add("bg-[#6d28d9]", "hover:bg-[#5a1fb8]");
+                  }
+                }, 2000);
+              } catch (err) {
+                console.error("Failed to copy text: ", err);
                 if (buttonText) {
-                  buttonText.textContent = 'Copy to Clipboard';
+                  buttonText.textContent = "Failed";
                 }
-              }, 2000);
-            }
-          });
+                setTimeout(() => {
+                  if (buttonText) {
+                    buttonText.textContent = "Copy";
+                  }
+                }, 2000);
+              }
+            });
         </script>
 
         <h2 class="mt-8 mb-4 text-2xl font-semibold">Need More Help?</h2>
@@ -371,7 +393,7 @@ Once your order has shipped, you can no longer edit it through the order editor.
       </div> -->
 
       <!-- Contact Support CTA -->
-      <div class="mt-16 rounded-xl bg-[#6d28d9]/5 p-8 text-center">
+      <div class="rounded-base mt-16 bg-[#6d28d9]/5 p-8 text-center">
         <h2 class="mb-4 text-2xl font-semibold">Still have questions?</h2>
         <p class="mb-6 text-gray-600">
           Our support team is ready to help you set up your FAQ page and answer
