@@ -95,7 +95,7 @@ const { title, description } = Astro.props;
 
               if (otherAccordionToggle && otherAccordionIcon) {
                 otherAccordionItem.classList.remove("active");
-                otherAccordionItem.classList.remove("bg-primary");
+                otherAccordionItem.classList.remove("bg-primary-lighter");
                 otherAccordionToggle.setAttribute("aria-expanded", "false");
                 otherAccordionItem.style.height = "112px";
                 otherAccordionIcon.classList.remove("rotate-180");
@@ -111,7 +111,7 @@ const { title, description } = Astro.props;
 
             // Set height according to content
             accordionItem.style.height = accordionItem.scrollHeight + "px";
-            accordionItem.classList.add("bg-primary");
+            accordionItem.classList.add("bg-primary-lighter");
             accordionIcon.classList.add("rotate-180");
             accordionIcon.classList.add("collapsed");
           } else {
@@ -122,7 +122,7 @@ const { title, description } = Astro.props;
             // height is 60, because the toggle's height is 60, the content is hidden
             accordionItem.style.height = "112px";
             accordionIcon.classList.remove("rotate-180");
-            accordionItem.classList.remove("bg-primary");
+            accordionItem.classList.remove("bg-primary-lighter");
             accordionIcon.classList.remove("collapsed");
           }
 
@@ -145,7 +145,7 @@ const { title, description } = Astro.props;
           !accordionItem.contains(event.target as Node)
         ) {
           accordionItem.classList.remove("active");
-          accordionItem.classList.remove("bg-primary");
+          accordionItem.classList.remove("bg-primary-lighter");
           accordionToggle.setAttribute("aria-expanded", "false");
 
           // Reset height. Overflow gets hidden
